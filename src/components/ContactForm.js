@@ -58,7 +58,7 @@ export default function ContactForm() {
     }
   };
 
-  const field = "mt-1 w-full rounded-md border border-stone-200 bg-paper px-3 py-2.5 text-sm outline-none focus:border-sage-500 focus-visible:outline-none focus:ring-2 focus:ring-sage-200";
+  const field = "mt-1.5 w-full rounded-md border border-stone-300 bg-white px-3.5 py-3 text-sm placeholder:text-stone-400 outline-none focus:border-sage-500 focus-visible:outline-none focus:ring-2 focus:ring-sage-200";
 
   if (status === "sent") {
     return (
@@ -74,23 +74,50 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">
-      <label className="block text-sm font-medium text-ink">
-        Name
-        <input required name="name" autoComplete="name" className={field} value={form.name} onChange={set("name")} />
-      </label>
-      <label className="block text-sm font-medium text-ink">
-        Email
-        <input required type="email" name="email" autoComplete="email" className={field} value={form.email} onChange={set("email")} />
-      </label>
-      <label className="block text-sm font-medium text-ink">
-        Project type
-        <select name="type" className={field} value={form.type} onChange={set("type")}>
-          {PROJECT_TYPES.map((t) => <option key={t}>{t}</option>)}
-        </select>
-      </label>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <label className="block text-sm font-medium text-ink">
+          Name
+          <input required name="name" autoComplete="name" placeholder="Your name" className={field} value={form.name} onChange={set("name")} />
+        </label>
+        <label className="block text-sm font-medium text-ink">
+          Email
+          <input required type="email" name="email" autoComplete="email" placeholder="you@company.com" className={field} value={form.email} onChange={set("email")} />
+        </label>
+      </div>
+      <fieldset>
+        <legend className="text-sm font-medium text-ink">Project type</legend>
+        <div className="mt-2 flex flex-wrap gap-2">
+          {PROJECT_TYPES.map((t) => (
+            <label key={t} className="cursor-pointer">
+              <input
+                type="radio"
+                name="type"
+                value={t}
+                checked={form.type === t}
+                onChange={set("type")}
+                className="peer sr-only"
+              />
+              <span className="inline-block rounded-full border border-stone-300 px-3.5 py-1.5 text-sm font-medium text-stone-600 transition-colors hover:border-stone-400 peer-checked:border-ink peer-checked:bg-ink peer-checked:text-paper peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-sage-500">
+                {t}
+              </span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
       <label className="block text-sm font-medium text-ink">
         What are you building?
-        <textarea required minLength={10} name="message" rows={5} className={field} value={form.message} onChange={set("message")} />
+        <textarea
+          required
+          minLength={10}
+          maxLength={5000}
+          name="message"
+          rows={6}
+          placeholder="What it does, who it is for, and any timeline or budget in mind."
+          className={field}
+          value={form.message}
+          onChange={set("message")}
+        />
+        <span className="mt-1 block text-right text-xs text-stone-500">{form.message.length} / 5000</span>
       </label>
 
       {/* Honeypot for bots; hidden from people and assistive tech. */}
@@ -103,9 +130,9 @@ export default function ContactForm() {
 
       <button
         disabled={status === "sending"}
-        className="rounded-md bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition-colors hover:bg-sage-800 disabled:opacity-60"
+        className="w-full rounded-md bg-ink px-5 py-3 text-sm font-semibold text-paper transition-colors hover:bg-sage-800 disabled:opacity-60 sm:w-auto"
       >
-        {status === "sending" ? "Sending…" : "Send message"}
+        {status === "sending" ? "Sending…" : "Send message →"}
       </button>
 
       {status === "error" && (
