@@ -1,11 +1,21 @@
 // Single source of truth for the portfolio. Edit this file to add, remove
 // or rewrite projects. Check each client project is OK to show publicly.
+//
+// Images: put files in public/images/projects and set the path, e.g.
+//   image: "/images/projects/cleansera.jpg"
+//   gallery: ["/images/projects/cleansera-1.jpg", ...]
+// Empty strings render a blank placeholder until you add the real files.
+const blank = (n) => Array.from({ length: n }, () => "");
+
 export const projects = [
   {
     slug: "cleansera",
     name: "CleanSera",
     kind: "SaaS platform",
+    category: "Full-stack",
     year: "",
+    image: "",
+    gallery: blank(2),
     summary:
       "Multi-tenant SaaS for cleaning businesses: scheduling, dispatch and a branded booking site, sold as a flat subscription with no marketplace commission.",
     role: "Designed and built the whole product.",
@@ -26,6 +36,9 @@ export const projects = [
     slug: "trabajhub",
     name: "TrabajHub",
     kind: "Healthcare staffing platform",
+    category: "Full-stack",
+    image: "",
+    gallery: blank(2),
     summary:
       "Multi-platform healthcare staffing product connecting nurses with shifts, with an admin dashboard for the operations team.",
     role: "Full-stack: mobile, web admin and backend.",
@@ -42,6 +55,9 @@ export const projects = [
     slug: "citiview-estate",
     name: "Citiview Estate",
     kind: "Estate management",
+    category: "Full-stack",
+    image: "",
+    gallery: blank(2),
     summary:
       "Estate management platform for residents and administrators, shipped as a Flutter app (Corvanta) plus a Next.js admin dashboard.",
     role: "Full-stack: mobile app and admin dashboard.",
@@ -54,6 +70,9 @@ export const projects = [
     slug: "dryva",
     name: "DRYVA",
     kind: "Logistics backend",
+    category: "Backend",
+    image: "",
+    gallery: blank(2),
     summary:
       "Backend for a trucking, haulage and warehousing company covering orders, warehouse inventory and a transport loading board.",
     role: "Backend design and implementation.",
@@ -70,6 +89,9 @@ export const projects = [
     slug: "afro-flavours",
     name: "Afro Flavours",
     kind: "Restaurant backend",
+    category: "Backend",
+    image: "",
+    gallery: blank(2),
     summary:
       "Backend for a restaurant site handling table bookings, catering requests, the menu, cash-on-delivery ordering, events, reviews and contact messages.",
     role: "Backend design and implementation.",
@@ -82,6 +104,9 @@ export const projects = [
     slug: "migrantifly",
     name: "Migrantifly",
     kind: "Web portal",
+    category: "Web",
+    image: "",
+    gallery: blank(2),
     summary:
       "Immigration-related client portal with dashboards for documents, profile and transactions.",
     role: "Frontend build and deployment.",
@@ -94,6 +119,9 @@ export const projects = [
     slug: "et-management-partners",
     name: "E&T Management Partners",
     kind: "Marketing site",
+    category: "Web",
+    image: "",
+    gallery: blank(2),
     summary: "Marketing website for E&T Management Partners Limited.",
     role: "Design and build.",
     highlights: ["Responsive marketing site"],
@@ -111,3 +139,54 @@ export const skills = [
   { group: "Backend", items: ["Node.js", "Express", "NestJS", "Prisma", "MongoDB"] },
   { group: "Payments and ops", items: ["Stripe Connect", "Render"] },
 ];
+
+// Home page "services" cards. Set `image` to a path in public/images/services.
+export const services = [
+  {
+    title: "Mobile apps",
+    description: "Flutter apps for iOS and Android, built against a real backend from the first screen.",
+    stack: ["Flutter", "Dart"],
+    image: "",
+  },
+  {
+    title: "Web apps and dashboards",
+    description: "Customer portals, admin dashboards and marketing sites that load fast and read well on a phone.",
+    stack: ["Next.js", "React", "Tailwind CSS"],
+    image: "",
+  },
+  {
+    title: "Backend and APIs",
+    description: "Clear data models, authentication, payments and the integrations your product depends on.",
+    stack: ["Node.js", "NestJS", "Prisma", "MongoDB"],
+    image: "",
+  },
+  {
+    title: "Technical contracting",
+    description: "I join your team and repo, take a module or feature, and ship it using your process.",
+    stack: ["Code review", "Handover docs"],
+    image: "",
+  },
+];
+
+// Ways of working together. Add pricing here later if you want it shown.
+export const engagements = [
+  {
+    title: "Fixed-scope project",
+    description: "We agree the scope, timeline and deliverables up front, then I build the product end to end.",
+    fit: "New products and MVPs",
+  },
+  {
+    title: "Monthly retainer",
+    description: "A set amount of development time each month for features, fixes and upkeep.",
+    fit: "Live products that keep evolving",
+  },
+  {
+    title: "Embedded contractor",
+    description: "I work inside your team, on your tickets and your repo, for as long as you need.",
+    fit: "Teams that need extra hands",
+  },
+];
+
+// Add client quotes here and the section appears on the home page.
+// Shape: { quote: "", name: "", role: "", avatar: "" }
+export const testimonials = [];

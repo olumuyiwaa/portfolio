@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { SITE_NAME } from "@/lib/siteConfig";
 
 const NAV_ITEMS = [
+  { label: "Services", href: "/#services" },
   { label: "Work", href: "/projects" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
@@ -60,7 +61,7 @@ export default function Header() {
             href="/contact"
             className="rounded-md bg-ink px-4 py-2 text-sm font-semibold text-paper hover:bg-sage-800 transition-colors"
           >
-            Hire me
+            Get a quote
           </Link>
         </div>
 
@@ -86,7 +87,7 @@ export default function Header() {
               </Link>
             ))}
             <Link href="/contact" className="mt-2 rounded-md bg-ink px-4 py-2.5 text-center text-sm font-semibold text-paper">
-              Hire me
+              Get a quote
             </Link>
           </div>
         </div>

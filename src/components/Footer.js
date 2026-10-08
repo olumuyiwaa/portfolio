@@ -10,6 +10,7 @@ export default function Footer() {
           <p className="mt-1 text-sm text-stone-500">Full-stack developer · Lagos, Nigeria</p>
         </div>
         <ul className="flex flex-wrap gap-5 text-sm text-stone-500">
+          <li><Link href="/#services" className="hover:text-sage-700">Services</Link></li>
           <li><Link href="/projects" className="hover:text-sage-700">Work</Link></li>
           <li><Link href="/about" className="hover:text-sage-700">About</Link></li>
           <li><a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-sage-700">Email</a></li>

@@ -11,6 +11,13 @@ export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "you@examp
 export const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/olumuyiwaa";
 export const LINKEDIN_URL = process.env.NEXT_PUBLIC_LINKEDIN_URL || "";
 
+// Site-level images. Drop files in public/images and set the path here,
+// for example "/images/hero.jpg". Empty strings render a blank placeholder.
+export const IMAGES = {
+  hero: "",
+  about: "",
+};
+
 export function buildMetadata({ title, description, path = "" }) {
   const url = `${SITE_URL}${path}`;
   return {

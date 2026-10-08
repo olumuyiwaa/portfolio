@@ -1,4 +1,4 @@
-import ProjectCard from "@/components/ProjectCard";
+import ProjectGrid from "@/components/ProjectGrid";
 import { projects } from "@/lib/projects";
 
 export default function ProjectsPage() {
@@ -8,8 +8,8 @@ export default function ProjectsPage() {
       <p className="mt-3 max-w-2xl text-lg text-stone-600">
         A selection of products I have designed and built, across mobile, web and backend.
       </p>
-      <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((p) => <ProjectCard key={p.slug} project={p} />)}
+      <div className="mt-10">
+        <ProjectGrid projects={projects} />
       </div>
     </section>
   );
