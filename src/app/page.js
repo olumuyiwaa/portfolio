@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ImageSlot from "@/components/ImageSlot";
 import ProjectCard from "@/components/ProjectCard";
+import ServiceIcon from "@/components/ServiceIcon";
 import { projects, skills, services, engagements, testimonials } from "@/lib/projects";
 import { SITE_NAME, GITHUB_URL, IMAGES } from "@/lib/siteConfig";
 
@@ -31,14 +32,40 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <ImageSlot
-          src={IMAGES.hero}
-          alt={`Portrait of ${SITE_NAME}`}
-          ratio="aspect-[4/5]"
-          className="rounded-xl"
-          sizes="(min-width: 768px) 40vw, 100vw"
-          priority
-        />
+        {IMAGES.hero ? (
+          <ImageSlot
+            src={IMAGES.hero}
+            alt={`Portrait of ${SITE_NAME}`}
+            ratio="aspect-[4/5]"
+            className="rounded-xl"
+            sizes="(min-width: 768px) 40vw, 100vw"
+            priority
+          />
+        ) : (
+          <aside
+            aria-label="Stack at a glance"
+            className="animate-fade-up rounded-xl border border-sage-200 bg-gradient-to-br from-sage-50 to-sage-100 p-6 md:p-8"
+          >
+            <p className="text-sm font-semibold text-sage-700">Stack at a glance</p>
+            <dl className="mt-5 space-y-5">
+              {skills.map((g) => (
+                <div key={g.group}>
+                  <dt className="text-xs font-semibold uppercase tracking-widest text-stone-500">{g.group}</dt>
+                  <dd className="mt-2 flex flex-wrap gap-2">
+                    {g.items.map((i) => (
+                      <span key={i} className="rounded-full bg-paper px-2.5 py-1 text-xs font-medium text-sage-700 ring-1 ring-sage-200">
+                        {i}
+                      </span>
+                    ))}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mt-6 border-t border-sage-200 pt-4 text-sm text-stone-600">
+              {projects.length} projects across mobile, web and backend · Lagos, Nigeria
+            </p>
+          </aside>
+        )}
       </section>
 
       <section id="services" className="scroll-mt-20 bg-sage-50 py-16 md:py-20">
@@ -50,7 +77,7 @@ export default function Home() {
           <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((s) => (
               <article key={s.title} className="flex flex-col">
-                <ImageSlot src={s.image} alt={s.title} ratio="aspect-[4/3]" className="rounded-lg" sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 100vw" />
+                <ImageSlot src={s.image} alt={s.title} ratio="aspect-[4/3]" className="rounded-lg" sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 100vw" fallback={<ServiceIcon name={s.icon} />} />
                 <h3 className="mt-4 font-display text-lg font-semibold text-ink">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-stone-600">{s.description}</p>
                 <p className="mt-3 text-sm text-sage-700">{s.stack.join(", ")}</p>

@@ -5,44 +5,121 @@ import { CONTACT_EMAIL } from "@/lib/siteConfig";
 
 const PROJECT_TYPES = ["Mobile app", "Web app or dashboard", "Backend or API", "Full product", "Not sure yet"];
 
-// No backend needed: submitting opens the visitor's mail app with the
-// message pre-filled. Swap for an API call or a form service later.
+// Posts to /api/contact. If email sending is not configured or fails, it
+// falls back to opening the visitor's mail app with the message pre-filled.
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: "", email: "", type: "Not sure yet", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", type: "Not sure yet", message: "", website: "" });
+  // idle | sending | sent | fallback | error
+  const [status, setStatus] = useState("idle");
+  const [error, setError] = useState("");
+  const [copied, setCopied] = useState(false);
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
-  const onSubmit = (e) => {
-    e.preventDefault();
+  const openMailApp = () => {
     const subject = encodeURIComponent(`Project enquiry from ${form.name}`);
     const body = encodeURIComponent(`Project type: ${form.type}\n\n${form.message}\n\n${form.name}\n${form.email}`);
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   };
 
-  const field = "mt-1 w-full rounded-md border border-stone-200 bg-paper px-3 py-2.5 text-sm outline-none focus:border-sage-500";
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setStatus("sent");
+        setForm({ name: "", email: "", type: "Not sure yet", message: "", website: "" });
+        return;
+      }
+      const data = await res.json().catch(() => ({}));
+      if (res.status === 400 || res.status === 429) {
+        setError(data.error || "Something went wrong.");
+        setStatus("error");
+        return;
+      }
+    } catch {
+      // Network error: use the fallback below.
+    }
+    setStatus("fallback");
+    openMailApp();
+  };
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      setCopied(true);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const field = "mt-1 w-full rounded-md border border-stone-200 bg-paper px-3 py-2.5 text-sm outline-none focus:border-sage-500 focus-visible:outline-none focus:ring-2 focus:ring-sage-200";
+
+  if (status === "sent") {
+    return (
+      <div role="status" className="rounded-lg bg-sage-50 p-6">
+        <h2 className="font-display text-xl font-bold text-ink">Message sent</h2>
+        <p className="mt-2 text-stone-600">Thanks for reaching out. I will reply with next steps soon.</p>
+        <button type="button" onClick={() => setStatus("idle")} className="mt-4 text-sm font-semibold text-sage-700 underline underline-offset-2">
+          Send another message
+        </button>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">
       <label className="block text-sm font-medium text-ink">
         Name
-        <input required className={field} value={form.name} onChange={set("name")} />
+        <input required name="name" autoComplete="name" className={field} value={form.name} onChange={set("name")} />
       </label>
       <label className="block text-sm font-medium text-ink">
         Email
-        <input required type="email" className={field} value={form.email} onChange={set("email")} />
+        <input required type="email" name="email" autoComplete="email" className={field} value={form.email} onChange={set("email")} />
       </label>
       <label className="block text-sm font-medium text-ink">
         Project type
-        <select className={field} value={form.type} onChange={set("type")}>
+        <select name="type" className={field} value={form.type} onChange={set("type")}>
           {PROJECT_TYPES.map((t) => <option key={t}>{t}</option>)}
         </select>
       </label>
       <label className="block text-sm font-medium text-ink">
         What are you building?
-        <textarea required rows={5} className={field} value={form.message} onChange={set("message")} />
+        <textarea required minLength={10} name="message" rows={5} className={field} value={form.message} onChange={set("message")} />
       </label>
-      <button className="rounded-md bg-ink px-5 py-2.5 text-sm font-semibold text-paper hover:bg-sage-800 transition-colors">
-        Send message
+
+      {/* Honeypot for bots; hidden from people and assistive tech. */}
+      <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+        <label>
+          Website
+          <input tabIndex={-1} autoComplete="off" name="website" value={form.website} onChange={set("website")} />
+        </label>
+      </div>
+
+      <button
+        disabled={status === "sending"}
+        className="rounded-md bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition-colors hover:bg-sage-800 disabled:opacity-60"
+      >
+        {status === "sending" ? "Sending…" : "Send message"}
       </button>
+
+      {status === "error" && (
+        <p role="alert" className="text-sm text-red-700">{error}</p>
+      )}
+      {status === "fallback" && (
+        <p role="status" className="rounded-md bg-sage-50 p-4 text-sm leading-relaxed text-stone-700">
+          I could not send this directly, so your email app should open with the message ready to send. Nothing happened?{" "}
+          <button type="button" onClick={copyEmail} className="font-semibold text-sage-700 underline underline-offset-2">
+            {copied ? "Address copied" : "Copy my email address"}
+          </button>{" "}
+          and write to me directly.
+        </p>
+      )}
     </form>
   );
 }

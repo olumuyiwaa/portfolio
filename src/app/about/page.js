@@ -6,7 +6,7 @@ import { SITE_NAME, IMAGES } from "@/lib/siteConfig";
 export default function AboutPage() {
   return (
     <section className="container-page max-w-3xl py-16 md:py-20">
-      <div className="grid items-center gap-8 sm:grid-cols-[1fr_200px]">
+      <div className={IMAGES.about ? "grid items-center gap-8 sm:grid-cols-[1fr_200px]" : ""}>
         <h1 className="font-display text-4xl font-extrabold text-ink">About</h1>
         <ImageSlot
           src={IMAGES.about}
@@ -14,11 +14,12 @@ export default function AboutPage() {
           ratio="aspect-square"
           className="rounded-xl sm:order-last"
           sizes="200px"
+          hideWhenEmpty
         />
       </div>
       <div className="mt-6 space-y-4 text-lg leading-relaxed text-stone-600">
         <p>
-          I'm a full-stack developer and technical contractor based in Lagos,
+          I&apos;m a full-stack developer and technical contractor based in Lagos,
           Nigeria. I build complete applications from scratch: the mobile app,
           the web dashboard and the backend behind them.
         </p>

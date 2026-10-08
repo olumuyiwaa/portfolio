@@ -26,7 +26,16 @@ export default function Header() {
 
   useEffect(() => setMenuOpen(false), [pathname]);
 
-  const isActive = (href) => pathname === href || pathname.startsWith(href + "/");
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e) => e.key === "Escape" && setMenuOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
+
+  const closeMenu = () => setMenuOpen(false);
+
+  const isActive = (href) => !href.includes("#") && (pathname === href || pathname.startsWith(href + "/"));
 
   return (
     <header
@@ -47,6 +56,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={isActive(item.href) ? "page" : undefined}
               className={`rounded-sm px-3 py-2 text-sm font-medium transition-colors ${
                 isActive(item.href) ? "text-sage-700 bg-sage-50" : "text-stone-600 hover:text-ink"
               }`}
@@ -67,8 +77,9 @@ export default function Header() {
 
         <button
           className="md:hidden grid h-9 w-9 place-items-center rounded-sm border border-stone-200"
-          aria-label="Toggle menu"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
           onClick={() => setMenuOpen((v) => !v)}
         >
           <span className="relative block h-3 w-5">
@@ -79,14 +90,14 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden border-t border-stone-200 bg-paper">
+        <div id="mobile-menu" className="md:hidden border-t border-stone-200 bg-paper">
           <div className="container-page flex flex-col py-3">
             {NAV_ITEMS.map((item) => (
-              <Link key={item.href} href={item.href} className="py-2.5 text-sm font-medium text-stone-700">
+              <Link key={item.href} href={item.href} onClick={closeMenu} aria-current={isActive(item.href) ? "page" : undefined} className="py-2.5 text-sm font-medium text-stone-700">
                 {item.label}
               </Link>
             ))}
-            <Link href="/contact" className="mt-2 rounded-md bg-ink px-4 py-2.5 text-center text-sm font-semibold text-paper">
+            <Link href="/contact" onClick={closeMenu} className="mt-2 rounded-md bg-ink px-4 py-2.5 text-center text-sm font-semibold text-paper">
               Get a quote
             </Link>
           </div>

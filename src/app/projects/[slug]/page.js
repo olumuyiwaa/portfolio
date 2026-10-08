@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ImageSlot from "@/components/ImageSlot";
+import ProjectCover from "@/components/ProjectCover";
 import { projects, getProject } from "@/lib/projects";
 import { buildMetadata } from "@/lib/siteConfig";
 
@@ -29,14 +30,7 @@ export default function ProjectPage({ params }) {
         <p className="mt-5 text-lg leading-relaxed text-stone-600">{p.summary}</p>
       </div>
 
-      <ImageSlot
-        src={p.image}
-        alt={`${p.name} preview`}
-        ratio="aspect-[16/9]"
-        className="mt-10 rounded-xl"
-        sizes="(min-width: 1200px) 1200px, 100vw"
-        priority
-      />
+      <ProjectCover project={p} ratio="aspect-[16/9]" className="mt-10 rounded-xl" sizes="(min-width: 1200px) 1200px, 100vw" priority />
 
       <div className="mt-10 max-w-3xl">
         <dl className="grid gap-8 sm:grid-cols-2">
@@ -71,9 +65,9 @@ export default function ProjectPage({ params }) {
         )}
       </div>
 
-      {p.gallery?.length > 0 && (
+      {p.gallery?.some(Boolean) && (
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {p.gallery.map((src, idx) => (
+          {p.gallery.filter(Boolean).map((src, idx) => (
             <ImageSlot key={idx} src={src} alt={`${p.name} screenshot ${idx + 1}`} ratio="aspect-[16/10]" className="rounded-lg" sizes="(min-width: 640px) 50vw, 100vw" />
           ))}
         </div>

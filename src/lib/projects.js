@@ -140,28 +140,33 @@ export const skills = [
   { group: "Payments and ops", items: ["Stripe Connect", "Render"] },
 ];
 
-// Home page "services" cards. Set `image` to a path in public/images/services.
+// Home page "services" cards. Set `image` to a path in public/images/services;
+// until then the card shows the line icon named by `icon`.
 export const services = [
   {
     title: "Mobile apps",
+    icon: "mobile",
     description: "Flutter apps for iOS and Android, built against a real backend from the first screen.",
     stack: ["Flutter", "Dart"],
     image: "",
   },
   {
     title: "Web apps and dashboards",
+    icon: "web",
     description: "Customer portals, admin dashboards and marketing sites that load fast and read well on a phone.",
     stack: ["Next.js", "React", "Tailwind CSS"],
     image: "",
   },
   {
     title: "Backend and APIs",
+    icon: "backend",
     description: "Clear data models, authentication, payments and the integrations your product depends on.",
     stack: ["Node.js", "NestJS", "Prisma", "MongoDB"],
     image: "",
   },
   {
     title: "Technical contracting",
+    icon: "team",
     description: "I join your team and repo, take a module or feature, and ship it using your process.",
     stack: ["Code review", "Handover docs"],
     image: "",

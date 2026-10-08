@@ -20,7 +20,7 @@ export default function Footer() {
           )}
         </ul>
       </div>
-      <div className="container-page border-t border-stone-200 py-4 text-xs text-stone-400">
+      <div className="container-page border-t border-stone-200 py-4 text-xs text-stone-500">
         © {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
       </div>
     </footer>

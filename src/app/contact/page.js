@@ -5,9 +5,9 @@ export default function ContactPage() {
   return (
     <section className="container-page grid gap-12 py-16 md:grid-cols-2 md:py-20">
       <div>
-        <h1 className="font-display text-4xl font-extrabold text-ink">Let's talk</h1>
+        <h1 className="font-display text-4xl font-extrabold text-ink">Let&apos;s talk</h1>
         <p className="mt-4 text-lg text-stone-600">
-          Tell me what you're building and I'll reply with next steps.
+          Tell me what you&apos;re building and I&apos;ll reply with next steps.
         </p>
         <ul className="mt-8 space-y-2 text-sm text-stone-700">
           <li><a className="font-semibold hover:text-sage-700" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></li>
