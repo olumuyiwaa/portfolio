@@ -61,7 +61,7 @@ export default function OpengraphImage() {
                   maxWidth: 900,
                 }}
             >
-              Full-stack developer
+              Mobile developer
             </div>
             <div
                 style={{
@@ -71,7 +71,7 @@ export default function OpengraphImage() {
                   maxWidth: 800,
                 }}
             >
-              Flutter, Next.js and Node.js products, built end to end.
+              Flutter apps for iOS and Android, with the web and backend to match.
             </div>
           </div>
       ),

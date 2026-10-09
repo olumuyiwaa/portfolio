@@ -6,8 +6,8 @@ import { SITE_NAME, ROLE, IMAGES, GITHUB_URL } from "@/lib/siteConfig";
 
 const PRINCIPLES = [
   {
-    title: "The whole product, not one layer",
-    text: "I build the mobile app, the web dashboard and the backend behind them, so the pieces fit together from the first screen.",
+    title: "Mobile first, whole product",
+    text: "I start from the mobile app and build the web dashboard and backend behind it, so the pieces fit together from the first screen.",
   },
   {
     title: "Consistent architecture",
@@ -33,17 +33,17 @@ export default function AboutPage() {
           <div className="max-w-2xl">
             <p className="text-sm font-semibold text-sage-700">About</p>
             <h1 className="mt-2 max-w-3xl font-display text-4xl font-extrabold leading-tight text-ink md:text-5xl">
-              {ROLE} building complete products
+              {ROLE} who ships the whole product
             </h1>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-stone-600">
               <p>
-                I&apos;m {SITE_NAME}, a full-stack developer and technical contractor based in Lagos,
-                Nigeria. I build complete applications from scratch: the mobile app, the web
-                dashboard and the backend behind them.
+                I&apos;m {SITE_NAME}, a mobile developer and technical contractor based in Lagos,
+                Nigeria. I build Flutter apps for iOS and Android, and when a product needs them,
+                the web dashboard and the backend behind the app.
               </p>
               <p>
-                My day-to-day stack is Flutter for mobile, Next.js for web and Node.js (Express and
-                NestJS) for APIs. I like consistent architecture, clear data models and code the
+                Mobile is my main craft, in Flutter. Around it I use Next.js for web and Node.js
+                (Express and NestJS) for APIs. I like consistent architecture, clear data models and code the
                 next developer can pick up without a tour.
               </p>
             </div>
@@ -70,7 +70,7 @@ export default function AboutPage() {
         <dl className="mt-12 grid gap-px overflow-hidden rounded-lg border border-stone-200 bg-stone-200 sm:grid-cols-2 lg:grid-cols-4">
           {[
             ["Based in", "Lagos, Nigeria"],
-            ["Core stack", "Flutter, Next.js, Node.js"],
+            ["Core stack", "Flutter first, plus Next.js and Node.js"],
             ["Projects", `${projects.length} across mobile, web and backend`],
             ["Works as", "Contractor, on projects or inside your team"],
           ].map(([k, v]) => (

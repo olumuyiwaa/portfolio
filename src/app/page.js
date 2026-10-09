@@ -14,10 +14,11 @@ export default function Home() {
       <section className="container-page grid items-center gap-10 py-16 md:grid-cols-[1.15fr_0.85fr] md:gap-14 md:py-24">
         <div>
           <h1 className="animate-fade-up max-w-3xl font-display text-4xl font-extrabold leading-tight text-ink md:text-6xl">
-            Hi, I&apos;m {SITE_NAME}. I build complete products, from mobile app to backend.
+            Hi, I&apos;m {SITE_NAME}. I build mobile apps, and the web and backend behind them.
           </h1>
           <p className="animate-fade-up mt-6 max-w-xl text-lg leading-relaxed text-stone-600">
-            I work across Flutter, Next.js and Node.js to ship production-structured
+            I&apos;m a mobile developer working in Flutter, with Next.js and Node.js
+            for the dashboards and APIs a product needs. I ship production-structured
             apps for clients: SaaS platforms, staffing and estate tools, logistics
             and restaurant backends.
           </p>

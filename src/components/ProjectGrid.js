@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import ProjectCard from "@/components/ProjectCard";
 
-const ORDER = ["Full-stack", "Web", "Backend", "Mobile"];
+const ORDER = ["Mobile", "Full-stack", "Web", "Backend"];
 
 export default function ProjectGrid({ projects }) {
   const categories = useMemo(

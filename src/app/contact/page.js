@@ -48,7 +48,7 @@ export default function ContactPage() {
             Let&apos;s build something together
           </h1>
           <p className="mt-4 max-w-md text-lg leading-relaxed text-stone-600">
-            Tell me what you&apos;re building and I&apos;ll reply with next steps. Mobile, web or backend, from a first MVP to an existing product.
+            Tell me what you&apos;re building and I&apos;ll reply with next steps. Mobile apps first, plus web and backend, from a first MVP to an existing product.
           </p>
 
           <ul className="mt-8 space-y-3">
