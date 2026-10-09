@@ -34,8 +34,6 @@ const PATHS = {
   ),
 };
 
-export const ICON_PATHS = PATHS;
-
 export default function ServiceIcon({ name }) {
   return (
     <div className="absolute inset-0 grid place-items-center text-sage-600">

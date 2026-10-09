@@ -133,19 +133,29 @@ export const projects = [
 
 export const getProject = (slug) => projects.find((p) => p.slug === slug);
 
-// `blurb` is the one-line description shown on the home page "What I work
-// with" cards; `icon` picks the line icon (mobile, web, backend, ops).
 export const skills = [
-  { group: "Mobile", icon: "mobile", blurb: "iOS and Android apps from one codebase.", items: ["Flutter", "Dart"] },
-  { group: "Web", icon: "web", blurb: "Dashboards, portals and marketing sites.", items: ["Next.js", "React", "Tailwind CSS"] },
-  { group: "Backend", icon: "backend", blurb: "APIs, data models and authentication.", items: ["Node.js", "Express", "NestJS", "Prisma", "MongoDB"] },
-  { group: "Payments and ops", icon: "ops", blurb: "Taking payments and getting to production.", items: ["Stripe Connect", "Render"] },
+  { group: "Mobile", items: ["Flutter", "Dart"] },
+  { group: "Web", items: ["Next.js", "React", "Tailwind CSS"] },
+  { group: "Backend", items: ["Node.js", "Express", "NestJS", "Prisma", "MongoDB"] },
+  { group: "Payments and ops", items: ["Stripe Connect", "Render"] },
 ];
 
-// How many of the projects above list a tool in their stack. Used to show
-// real usage next to each skill rather than self-rated levels.
-export const projectCount = (item) =>
-  projects.filter((p) => p.stack.some((s) => s.toLowerCase() === item.toLowerCase())).length;
+// Home and About "My Tools" section: one tile per tool with a short
+// descriptor. `mark` is the two-letter tile label and `tint` picks the tile colour (mobile, web, backend, ops).
+export const tools = [
+  { name: "Flutter", mark: "Fl", note: "Cross-platform Mobile Apps", tint: "mobile" },
+  { name: "Dart", mark: "Dt", note: "Mobile App Language", tint: "mobile" },
+  { name: "Next.js", mark: "Nx", note: "Web Apps and Dashboards", tint: "web" },
+  { name: "React", mark: "Rc", note: "Interactive Interfaces", tint: "web" },
+  { name: "Tailwind CSS", mark: "Tw", note: "Responsive Styling", tint: "web" },
+  { name: "Node.js", mark: "Nd", note: "Server-side JavaScript", tint: "backend" },
+  { name: "Express", mark: "Ex", note: "REST APIs", tint: "backend" },
+  { name: "NestJS", mark: "Ns", note: "Structured Backends", tint: "backend" },
+  { name: "Prisma", mark: "Pr", note: "Database Access", tint: "backend" },
+  { name: "MongoDB", mark: "Mg", note: "Document Database", tint: "backend" },
+  { name: "Stripe Connect", mark: "St", note: "Payments and Payouts", tint: "ops" },
+  { name: "Render", mark: "Rn", note: "Deployment and Hosting", tint: "ops" },
+];
 
 // Home page "services" cards. Set `image` to a path in public/images/services;
 // until then the card shows the line icon named by `icon`.
