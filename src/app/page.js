@@ -17,8 +17,8 @@ export default function Home() {
             Hi, I&apos;m {SITE_NAME}. I build mobile apps, and the web and backend behind them.
           </h1>
           <p className="animate-fade-up mt-6 max-w-xl text-lg leading-relaxed text-stone-600">
-            I&apos;m a mobile developer working in Flutter, with Next.js and Node.js
-            for the dashboards and APIs a product needs. I ship production-structured
+            I&apos;m a software engineer who builds mobile apps in Flutter, with Next.js and
+            Node.js for the dashboards and APIs a product needs. I ship production-structured
             apps for clients: SaaS platforms, staffing and estate tools, logistics
             and restaurant backends.
           </p>

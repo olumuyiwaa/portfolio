@@ -37,7 +37,7 @@ export default function AboutPage() {
             </h1>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-stone-600">
               <p>
-                I&apos;m {SITE_NAME}, a mobile developer and technical contractor based in Lagos,
+                I&apos;m {SITE_NAME}, a software engineer and technical contractor based in Lagos,
                 Nigeria. I build Flutter apps for iOS and Android, and when a product needs them,
                 the web dashboard and the backend behind the app.
               </p>
