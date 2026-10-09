@@ -1,5 +1,7 @@
 // Single source of truth for the portfolio. Edit this file to add, remove
 // or rewrite projects. Check each client project is OK to show publicly.
+// `links` is for public live sites only; the source repos are private, so
+// none are linked.
 //
 // Images: put files in public/images/projects and set the path, e.g.
 //   image: "/images/projects/cleansera.jpg"
@@ -25,11 +27,7 @@ export const projects = [
       "Per-tenant branding and booking flows",
     ],
     stack: ["Next.js", "Node.js", "Flutter", "Stripe Connect", "Tailwind CSS"],
-    links: [
-      { label: "Marketing site code", href: "https://github.com/olumuyiwaa/cleansera_sass_website" },
-      { label: "Dashboard code", href: "https://github.com/olumuyiwaa/cleansera_sass_frontend" },
-      { label: "API code", href: "https://github.com/olumuyiwaa/cleansera_sass" },
-    ],
+    links: [],
     featured: true,
   },
   {
