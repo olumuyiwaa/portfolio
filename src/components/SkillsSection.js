@@ -2,10 +2,10 @@ import Link from "next/link";
 import { tools } from "@/lib/projects";
 
 const TINTS = {
-  mobile: "bg-sage-600 text-sage-50",
-  web: "bg-sage-800 text-sage-100",
-  backend: "bg-amber-500 text-amber-50",
-  ops: "bg-sage-200 text-sage-800",
+  mobile: "bg-sage-600 text-white",
+  web: "bg-ink text-white",
+  backend: "bg-amber-300 text-ink",
+  ops: "bg-sage-200 text-sage-900",
 };
 
 // "My Tools": a tile per tool with its name and a short descriptor.

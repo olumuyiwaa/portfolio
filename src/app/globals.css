@@ -5,8 +5,8 @@
 :root {
   --font-display: "Plus Jakarta Sans", sans-serif;
   --font-body: "Manrope", sans-serif;
-  --site-bg: #f6f2ed;
-  --site-ink: #171b1a;
+  --site-bg: #f8f7f3;
+  --site-ink: #101814;
 }
 
 html {
@@ -27,7 +27,7 @@ main {
 
 /* Visible keyboard focus everywhere, without affecting mouse users. */
 :focus-visible {
-  outline: 2px solid #4c8267;
+  outline: 2px solid #1f8a62;
   outline-offset: 2px;
 }
 
@@ -37,8 +37,8 @@ main {
   top: -64px;
   z-index: 100;
   border-radius: 8px;
-  background: #16231c;
-  color: #fbfbf8;
+  background: #101814;
+  color: #ffffff;
   padding: 10px 16px;
   font-size: 14px;
   font-weight: 600;

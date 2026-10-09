@@ -17,7 +17,7 @@ export default function ImageSlot({
 
   return (
     <div
-      className={`relative overflow-hidden bg-gradient-to-br from-sage-100 to-sage-200 ${ratio} ${className}`}
+      className={`relative overflow-hidden bg-sage-100 ${ratio} ${className}`}
       aria-hidden={src ? undefined : true}
     >
       {src ? (

@@ -45,7 +45,7 @@ export default function Header() {
     >
       <div className="container-page flex items-center justify-between gap-6 py-4">
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-[linear-gradient(135deg,#3f6b52,#6e9c82)] text-paper font-display font-semibold shadow-sm">
+          <span className="grid h-9 w-9 place-items-center rounded-xl bg-sage-600 text-paper font-display font-semibold">
             {SITE_NAME[0]}
           </span>
           <span className="font-display text-lg font-semibold text-ink">{SITE_NAME}</span>

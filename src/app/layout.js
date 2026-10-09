@@ -16,7 +16,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#FBFBF8",
+  themeColor: "#F8F7F3",
 };
 
 const structuredData = {

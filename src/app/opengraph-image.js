@@ -7,7 +7,7 @@ export const contentType = "image/png";
 // Built with next/og instead of a static asset because there is no
 // designed logo/OG image anywhere in this repo (no public/ directory at
 // all) — this at least gives link previews on Slack/X/LinkedIn something
-// on-brand instead of a blank box, using the same green (#3F6B52) the
+// on-brand instead of a blank box, using the same green (#137352) the
 // booking widget and site templates use as their default primary color.
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -21,9 +21,7 @@ export default function OpengraphImage() {
                 alignItems: "flex-start",
                 justifyContent: "center",
                 padding: "80px",
-                backgroundColor: "#F7F5F0",
-                backgroundImage:
-                    "linear-gradient(135deg, #F7F5F0 0%, #E7EFE9 100%)",
+                backgroundColor: "#F8F7F3",
               }}
           >
             <div
@@ -39,18 +37,18 @@ export default function OpengraphImage() {
                     width: 56,
                     height: 56,
                     borderRadius: 14,
-                    backgroundColor: "#3F6B52",
+                    backgroundColor: "#137352",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     fontSize: 30,
-                    color: "#F7F5F0",
+                    color: "#FFFFFF",
                     fontWeight: 700,
                   }}
               >
                 E
               </div>
-              <div style={{ fontSize: 36, fontWeight: 700, color: "#171B1A" }}>
+              <div style={{ fontSize: 36, fontWeight: 700, color: "#101814" }}>
                 Emmanuel
               </div>
             </div>
@@ -58,7 +56,7 @@ export default function OpengraphImage() {
                 style={{
                   fontSize: 52,
                   fontWeight: 700,
-                  color: "#171B1A",
+                  color: "#101814",
                   lineHeight: 1.15,
                   maxWidth: 900,
                 }}
@@ -68,7 +66,7 @@ export default function OpengraphImage() {
             <div
                 style={{
                   fontSize: 28,
-                  color: "#5F6664",
+                  color: "#54503F",
                   marginTop: 20,
                   maxWidth: 800,
                 }}

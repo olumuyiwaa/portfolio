@@ -4,10 +4,10 @@ import ImageSlot from "@/components/ImageSlot";
 // panel with the project's initials and kind. Once `project.image` is set
 // the real image is shown instead.
 const TINTS = [
-  "from-sage-600 to-sage-400 text-sage-50",
-  "from-sage-800 to-sage-600 text-sage-100",
-  "from-amber-600 to-amber-300 text-amber-50",
-  "from-sage-300 to-sage-100 text-sage-800",
+  "bg-sage-700 text-white",
+  "bg-ink text-amber-300",
+  "bg-amber-100 text-ink",
+  "bg-sage-200 text-sage-900",
 ];
 
 const initials = (name) =>
@@ -31,7 +31,7 @@ export default function ProjectCover({ project, ratio, className = "", sizes, pr
       sizes={sizes}
       priority={priority}
       fallback={
-        <div className={`absolute inset-0 flex flex-col justify-between bg-gradient-to-br p-6 ${tintFor(project.slug)}`}>
+        <div className={`absolute inset-0 flex flex-col justify-between p-6 ${tintFor(project.slug)}`}>
           <span className="text-xs font-semibold uppercase tracking-widest opacity-80">{project.category}</span>
           <span className="font-display text-6xl font-extrabold leading-none opacity-90 md:text-7xl">
             {initials(project.name)}

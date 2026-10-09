@@ -45,7 +45,7 @@ export default function Home() {
         ) : (
           <aside
             aria-label="Stack at a glance"
-            className="animate-fade-up rounded-xl border border-sage-200 bg-gradient-to-br from-sage-50 to-sage-100 p-6 md:p-8"
+            className="animate-fade-up rounded-xl border border-sage-200 bg-sage-50 p-6 md:p-8"
           >
             <p className="text-sm font-semibold text-sage-700">Stack at a glance</p>
             <dl className="mt-5 space-y-5">

@@ -94,7 +94,7 @@ export default function ContactPage() {
           </ol>
         </div>
 
-        <div className="self-start rounded-xl border border-stone-200 bg-paper p-6 shadow-[0_20px_50px_-30px_rgba(22,35,28,0.35)] md:p-8">
+        <div className="self-start rounded-xl border border-stone-200 bg-paper p-6 md:p-8">
           <h2 className="font-display text-xl font-bold text-ink">Send me a message</h2>
           <p className="mt-1 text-sm text-stone-600">All fields are required.</p>
           <div className="mt-6">
