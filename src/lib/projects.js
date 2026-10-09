@@ -133,12 +133,19 @@ export const projects = [
 
 export const getProject = (slug) => projects.find((p) => p.slug === slug);
 
+// `blurb` is the one-line description shown on the home page "What I work
+// with" cards; `icon` picks the line icon (mobile, web, backend, ops).
 export const skills = [
-  { group: "Mobile", items: ["Flutter", "Dart"] },
-  { group: "Web", items: ["Next.js", "React", "Tailwind CSS"] },
-  { group: "Backend", items: ["Node.js", "Express", "NestJS", "Prisma", "MongoDB"] },
-  { group: "Payments and ops", items: ["Stripe Connect", "Render"] },
+  { group: "Mobile", icon: "mobile", blurb: "iOS and Android apps from one codebase.", items: ["Flutter", "Dart"] },
+  { group: "Web", icon: "web", blurb: "Dashboards, portals and marketing sites.", items: ["Next.js", "React", "Tailwind CSS"] },
+  { group: "Backend", icon: "backend", blurb: "APIs, data models and authentication.", items: ["Node.js", "Express", "NestJS", "Prisma", "MongoDB"] },
+  { group: "Payments and ops", icon: "ops", blurb: "Taking payments and getting to production.", items: ["Stripe Connect", "Render"] },
 ];
+
+// How many of the projects above list a tool in their stack. Used to show
+// real usage next to each skill rather than self-rated levels.
+export const projectCount = (item) =>
+  projects.filter((p) => p.stack.some((s) => s.toLowerCase() === item.toLowerCase())).length;
 
 // Home page "services" cards. Set `image` to a path in public/images/services;
 // until then the card shows the line icon named by `icon`.

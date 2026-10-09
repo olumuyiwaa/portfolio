@@ -2,6 +2,7 @@ import Link from "next/link";
 import ImageSlot from "@/components/ImageSlot";
 import ProjectCard from "@/components/ProjectCard";
 import ServiceIcon from "@/components/ServiceIcon";
+import SkillsSection from "@/components/SkillsSection";
 import { projects, skills, services, engagements, testimonials } from "@/lib/projects";
 import { SITE_NAME, GITHUB_URL, IMAGES } from "@/lib/siteConfig";
 
@@ -115,19 +116,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container-page py-16 md:py-20">
-        <h2 className="font-display text-2xl font-bold text-ink md:text-3xl">What I work with</h2>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {skills.map((g) => (
-            <div key={g.group}>
-              <h3 className="text-sm font-semibold text-sage-700">{g.group}</h3>
-              <ul className="mt-3 space-y-1.5 text-sm text-stone-700">
-                {g.items.map((i) => <li key={i}>{i}</li>)}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
+      <SkillsSection />
 
       {testimonials.length > 0 && (
         <section className="bg-sage-50 py-16 md:py-20">

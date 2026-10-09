@@ -19,6 +19,12 @@ const PATHS = {
       <path d="M7 7h.01M7 17h.01" />
     </>
   ),
+  ops: (
+    <>
+      <rect x="3" y="5" width="18" height="12" rx="2.5" />
+      <path d="M3 9.5h18M7 13.5h3M9 21h6M12 17v4" />
+    </>
+  ),
   team: (
     <>
       <circle cx="9" cy="8" r="3.2" />
@@ -27,6 +33,8 @@ const PATHS = {
     </>
   ),
 };
+
+export const ICON_PATHS = PATHS;
 
 export default function ServiceIcon({ name }) {
   return (
