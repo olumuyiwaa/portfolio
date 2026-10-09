@@ -8,9 +8,9 @@ export default function ProjectCard({ project }) {
       className="group flex flex-col overflow-hidden rounded-lg border border-stone-200 bg-paper transition-colors hover:border-ink"
     >
       <ProjectCover project={project} ratio="aspect-[16/9]" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-5">
         <p className="text-sm text-sage-600">{project.kind}</p>
-        <h3 className="mt-1 font-display text-xl font-semibold text-ink">{project.name}</h3>
+        <h3 className="mt-1 font-display text-lg font-semibold text-ink">{project.name}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">{project.summary}</p>
         <ul className="mt-4 flex flex-wrap gap-2">
           {project.stack.map((s) => (

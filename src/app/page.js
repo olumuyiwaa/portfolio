@@ -8,7 +8,7 @@ import { projects, services, engagements, testimonials } from "@/lib/projects";
 import { SITE_NAME, GITHUB_URL, IMAGES } from "@/lib/siteConfig";
 
 export default function Home() {
-  const featured = projects.filter((p) => p.featured);
+  const featured = projects.filter((p) => p.featured).slice(0, 3);
 
   return (
     <>
@@ -80,7 +80,7 @@ export default function Home() {
           <h2 className="font-display text-3xl font-bold text-ink md:text-4xl">Selected work</h2>
           <Link href="/projects" className="text-sm font-semibold text-sage-700 hover:underline">All projects</Link>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {featured.map((p) => <ProjectCard key={p.slug} project={p} />)}
         </div>
       </section>
