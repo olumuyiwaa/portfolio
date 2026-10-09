@@ -34,12 +34,12 @@ const PATHS = {
   ),
 };
 
-export default function ServiceIcon({ name }) {
+export default function ServiceIcon({ name, className = "h-16 w-16" }) {
   return (
     <div className="absolute inset-0 grid place-items-center text-sage-600">
       <svg
         viewBox="0 0 24 24"
-        className="h-16 w-16"
+        className={className}
         fill="none"
         stroke="currentColor"
         strokeWidth="1.2"

@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container-page flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <Link href="/" className="font-display text-base font-semibold text-ink">{SITE_NAME}</Link>
-          <p className="mt-1 text-sm text-stone-500">Software engineer · Lagos, Nigeria</p>
+          <p className="mt-1 text-sm text-stone-500">Software engineer in Lagos, Nigeria</p>
         </div>
         <ul className="flex flex-wrap gap-5 text-sm text-stone-500">
           <li><Link href="/#services" className="hover:text-sage-700">Services</Link></li>

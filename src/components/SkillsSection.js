@@ -11,10 +11,10 @@ const TINTS = {
 // "My Tools": a tile per tool with its name and a short descriptor.
 export default function SkillsSection() {
   return (
-    <section className="container-page py-16 md:py-20" aria-labelledby="skills-heading">
+    <section className="container-page py-20 md:py-28" aria-labelledby="skills-heading">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div className="max-w-xl">
-          <h2 id="skills-heading" className="font-display text-2xl font-bold text-ink md:text-3xl">
+          <h2 id="skills-heading" className="font-display text-3xl font-bold text-ink md:text-4xl">
             What I work with
           </h2>
           <p className="mt-3 text-stone-600">The tools I use to design, build and ship products.</p>
@@ -24,11 +24,11 @@ export default function SkillsSection() {
         </Link>
       </div>
 
-      <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="mt-12 grid gap-px overflow-hidden rounded-lg border border-stone-200 bg-stone-200 sm:grid-cols-2 lg:grid-cols-3">
         {tools.map((t) => (
           <li
             key={t.name}
-            className="flex items-center gap-4 rounded-lg border border-stone-200 bg-paper p-4 transition-all hover:-translate-y-0.5 hover:border-sage-400"
+            className="flex items-center gap-4 bg-paper p-5 transition-colors hover:bg-sage-50"
           >
             <span
               aria-hidden="true"

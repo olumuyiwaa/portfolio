@@ -132,7 +132,7 @@ export default function ContactForm() {
         disabled={status === "sending"}
         className="w-full rounded-md bg-ink px-5 py-3 text-sm font-semibold text-paper transition-colors hover:bg-sage-800 disabled:opacity-60 sm:w-auto"
       >
-        {status === "sending" ? "Sending…" : "Send message →"}
+        {status === "sending" ? "Sending…" : "Send message"}
       </button>
 
       {status === "error" && (

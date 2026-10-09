@@ -63,7 +63,7 @@ export default function ContactPage() {
                     <Icon>{c.icon}</Icon>
                   </span>
                   <span className="min-w-0">
-                    <span className="block text-xs font-semibold uppercase tracking-widest text-stone-500">{c.label}</span>
+                    <span className="block text-sm text-stone-500">{c.label}</span>
                     <span className="block truncate text-sm font-semibold text-ink">{c.value}</span>
                   </span>
                   <span aria-hidden="true" className="ml-auto text-stone-400 transition-transform group-hover:translate-x-0.5 group-hover:text-sage-700">

@@ -5,9 +5,9 @@ export default function ProjectCard({ project }) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group flex flex-col overflow-hidden rounded-lg border border-stone-200 bg-paper transition-colors hover:border-sage-400"
+      className="group flex flex-col overflow-hidden rounded-lg border border-stone-200 bg-paper transition-colors hover:border-ink"
     >
-      <ProjectCover project={project} ratio="aspect-[16/10]" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+      <ProjectCover project={project} ratio="aspect-[16/9]" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
       <div className="flex flex-1 flex-col p-6">
         <p className="text-sm text-sage-600">{project.kind}</p>
         <h3 className="mt-1 font-display text-xl font-semibold text-ink">{project.name}</h3>
