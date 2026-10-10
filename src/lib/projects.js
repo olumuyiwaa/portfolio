@@ -127,7 +127,7 @@ export const projects = [
     name: "TrabajoHub",
     kind: "Healthcare staffing platform",
     category: "Full-stack",
-    image: "",
+    image: "/images/projects/trabajohub.jpg",
     gallery: blank(2),
     summary:
       "A healthcare staffing platform with a Flutter nurse app, a facility and admin dashboard, a marketing site and a Node.js API behind them.",
