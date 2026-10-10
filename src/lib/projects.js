@@ -412,24 +412,23 @@ export const skills = [
   { group: "Mobile", items: ["Flutter", "Dart"] },
   { group: "Web", items: ["Next.js", "React", "Tailwind CSS"] },
   { group: "Backend", items: ["Node.js", "Express", "NestJS", "Prisma", "MongoDB"] },
-  { group: "Payments and ops", items: ["Stripe Connect", "Render"] },
 ];
 
 // Home and About "My Tools" section: one tile per tool with a short
-// descriptor. `mark` is the two-letter tile label and `tint` picks the tile colour (mobile, web, backend, ops).
+// descriptor. `icon` keys into the brand-icon map in SkillsSection.
 export const tools = [
-  { name: "Flutter", mark: "Fl", note: "Cross-platform Mobile Apps", tint: "mobile" },
-  { name: "Dart", mark: "Dt", note: "Mobile App Language", tint: "mobile" },
-  { name: "Next.js", mark: "Nx", note: "Web Apps and Dashboards", tint: "web" },
-  { name: "React", mark: "Rc", note: "Interactive Interfaces", tint: "web" },
-  { name: "Tailwind CSS", mark: "Tw", note: "Responsive Styling", tint: "web" },
-  { name: "Node.js", mark: "Nd", note: "Server-side JavaScript", tint: "backend" },
-  { name: "Express", mark: "Ex", note: "REST APIs", tint: "backend" },
-  { name: "NestJS", mark: "Ns", note: "Structured Backends", tint: "backend" },
-  { name: "Prisma", mark: "Pr", note: "Database Access", tint: "backend" },
-  { name: "MongoDB", mark: "Mg", note: "Document Database", tint: "backend" },
-  { name: "Stripe Connect", mark: "St", note: "Payments and Payouts", tint: "ops" },
-  { name: "Render", mark: "Rn", note: "Deployment and Hosting", tint: "ops" },
+  { name: "Flutter", icon: "flutter", note: "Cross-platform Mobile Apps" },
+  { name: "Dart", icon: "dart", note: "Mobile App Language" },
+  { name: "Next.js", icon: "nextjs", note: "Web Apps and Dashboards" },
+  { name: "React", icon: "react", note: "Interactive Interfaces" },
+  { name: "Tailwind CSS", icon: "tailwind", note: "Responsive Styling" },
+  { name: "Node.js", icon: "nodejs", note: "Server-side JavaScript" },
+  { name: "Express", icon: "express", note: "REST APIs" },
+  { name: "NestJS", icon: "nestjs", note: "Structured Backends" },
+  { name: "Prisma", icon: "prisma", note: "Database Access" },
+  { name: "MongoDB", icon: "mongodb", note: "Document Database" },
+  { name: "PostgreSQL", icon: "postgresql", note: "Relational Database" },
+  { name: "Firebase", icon: "firebase", note: "Push Notifications and Services" },
 ];
 
 // Home page "services" cards. Set `image` to a path in public/images/services;

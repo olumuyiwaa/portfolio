@@ -1,11 +1,34 @@
 import Link from "next/link";
+import {
+  siFlutter,
+  siDart,
+  siNextdotjs,
+  siReact,
+  siTailwindcss,
+  siNodedotjs,
+  siExpress,
+  siNestjs,
+  siPrisma,
+  siMongodb,
+  siPostgresql,
+  siFirebase,
+} from "simple-icons";
 import { tools } from "@/lib/projects";
 
-const TINTS = {
-  mobile: "bg-sage-600 text-white",
-  web: "bg-ink text-white",
-  backend: "bg-amber-300 text-ink",
-  ops: "bg-sage-200 text-sage-900",
+// Official brand marks (simple-icons), drawn flat in each brand's own colour.
+const ICONS = {
+  flutter: siFlutter,
+  dart: siDart,
+  nextjs: siNextdotjs,
+  react: siReact,
+  tailwind: siTailwindcss,
+  nodejs: siNodedotjs,
+  express: siExpress,
+  nestjs: siNestjs,
+  prisma: siPrisma,
+  mongodb: siMongodb,
+  postgresql: siPostgresql,
+  firebase: siFirebase,
 };
 
 // "My Tools": a tile per tool with its name and a short descriptor.
@@ -32,9 +55,11 @@ export default function SkillsSection() {
           >
             <span
               aria-hidden="true"
-              className={`grid h-12 w-12 shrink-0 place-items-center rounded-md font-display text-base font-bold ${TINTS[t.tint]}`}
+              className="grid h-12 w-12 shrink-0 place-items-center rounded-md border border-stone-200 bg-paper"
             >
-              {t.mark}
+              <svg viewBox="0 0 24 24" className="h-6 w-6" fill={`#${ICONS[t.icon].hex}`}>
+                <path d={ICONS[t.icon].path} />
+              </svg>
             </span>
             <span className="min-w-0">
               <span className="block font-display text-base font-semibold text-ink">{t.name}</span>
