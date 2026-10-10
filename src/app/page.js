@@ -51,11 +51,12 @@ export default function Home() {
       </section>
 
       <section id="services" className="container-page scroll-mt-20 border-t border-stone-200 py-20 md:py-28">
-        <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-3">
+        <div>
           <h2 className="font-display text-3xl font-bold text-ink md:text-4xl">What I can build for you</h2>
-          <p className="max-w-md text-stone-600">
+          <p className="mt-4 max-w-xl text-stone-600">
             One developer for the whole product, or for the one part you are missing.
           </p>
+        </div>
         </div>
         <ul className="mt-12 grid gap-px overflow-hidden rounded-lg border border-stone-200 bg-stone-200 lg:grid-cols-2">
           {services.map((s) => (
