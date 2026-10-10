@@ -248,7 +248,7 @@ export const projects = [
     name: "Migrantifly",
     kind: "Immigration client portal",
     category: "Full-stack",
-    image: "",
+    image: "/images/projects/migrantifly.jpg",
     gallery: blank(2),
     summary:
       "A client portal and marketing site for a New Zealand immigration advisory firm, covering consultations, visa applications, documents, payments and messaging.",
