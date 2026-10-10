@@ -80,18 +80,6 @@ export default function ContactPage() {
             </li>
           </ul>
 
-          <h2 className="mt-10 font-display text-lg font-bold text-ink">What happens next</h2>
-          <ol className="mt-4 space-y-4">
-            {STEPS.map((s, i) => (
-              <li key={s.title} className="flex gap-4">
-                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-ink text-xs font-bold text-paper">{i + 1}</span>
-                <span>
-                  <span className="block text-sm font-semibold text-ink">{s.title}</span>
-                  <span className="block text-sm leading-relaxed text-stone-600">{s.text}</span>
-                </span>
-              </li>
-            ))}
-          </ol>
         </div>
 
         <div className="self-start rounded-xl border border-stone-200 bg-paper p-6 md:p-8">
@@ -101,6 +89,21 @@ export default function ContactPage() {
             <ContactForm />
           </div>
         </div>
+      </div>
+
+      <div className="mt-14 border-t border-stone-200 pt-10 md:mt-16">
+        <h2 className="font-display text-xl font-bold text-ink">What happens next</h2>
+        <ol className="mt-6 grid gap-6 md:grid-cols-3 md:gap-8">
+          {STEPS.map((s, i) => (
+            <li key={s.title} className="flex gap-4">
+              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-ink text-xs font-bold text-paper">{i + 1}</span>
+              <span>
+                <span className="block text-sm font-semibold text-ink">{s.title}</span>
+                <span className="mt-1 block text-sm leading-relaxed text-stone-600">{s.text}</span>
+              </span>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );
