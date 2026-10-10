@@ -47,7 +47,7 @@ export async function POST(request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL || process.env.NEXT_PUBLIC_CONTACT_EMAIL;
+  const to = process.env.CONTACT_TO_EMAIL || process.env.NEXT_PUBLIC_CONTACT_EMAIL || "oladoyinemmanuel@gmail.com";
   if (!apiKey || !to) {
     return NextResponse.json({ error: "Email sending is not configured." }, { status: 503 });
   }

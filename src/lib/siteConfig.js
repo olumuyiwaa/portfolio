@@ -7,7 +7,7 @@ export const SITE_URL =
 export const DEFAULT_DESCRIPTION =
   "Software engineer and technical contractor in Lagos, Nigeria. I build Flutter apps for iOS and Android, plus the web dashboards and backends behind them.";
 
-export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "you@example.com";
+export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "oladoyinemmanuel@gmail.com";
 export const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/olumuyiwaa";
 export const LINKEDIN_URL = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/emmanueloladoyin";
 
