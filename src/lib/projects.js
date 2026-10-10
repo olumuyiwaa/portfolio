@@ -356,7 +356,7 @@ export const projects = [
     name: "Afro Flavours",
     kind: "Restaurant website and ordering",
     category: "Full-stack",
-    image: "",
+    image: "/images/projects/afro-flavours.jpg",
     gallery: blank(2),
     summary:
       "A website and API for a West African restaurant and grocery in Auckland: table bookings, online ordering, catering requests, events and an admin dashboard.",
