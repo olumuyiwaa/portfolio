@@ -431,36 +431,37 @@ export const tools = [
   { name: "Firebase", icon: "firebase", note: "Push Notifications and Services" },
 ];
 
-// Home page "services" cards. Set `image` to a path in public/images/services;
-// until then the card shows the line icon named by `icon`.
+// Home page "services" cards. Drop a photo at the `image` path (in
+// public/images/services) and it replaces the drawn illustration; until the
+// file exists the card shows the illustration named by `icon`.
 export const services = [
   {
     title: "Mobile apps",
     icon: "mobile",
     description: "Flutter apps for iOS and Android, built against a real backend from the first screen.",
     stack: ["Flutter", "Dart"],
-    image: "",
+    image: "/images/services/mobile-apps.jpg",
   },
   {
     title: "Web apps and dashboards",
     icon: "web",
     description: "Customer portals, admin dashboards and marketing sites that load fast and read well on a phone.",
     stack: ["Next.js", "React", "Tailwind CSS"],
-    image: "",
+    image: "/images/services/web-apps.jpg",
   },
   {
     title: "Backend and APIs",
     icon: "backend",
     description: "Clear data models, authentication, payments and the integrations your product depends on.",
     stack: ["Node.js", "NestJS", "Prisma", "MongoDB"],
-    image: "",
+    image: "/images/services/backend-apis.jpg",
   },
   {
     title: "Technical contracting",
     icon: "team",
     description: "I join your team and repo, take a module or feature, and ship it using your process.",
     stack: ["Code review", "Handover docs"],
-    image: "",
+    image: "/images/services/contracting.jpg",
   },
 ];
 

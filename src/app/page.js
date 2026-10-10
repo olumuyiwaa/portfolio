@@ -2,7 +2,7 @@ import Link from "next/link";
 import ImageSlot from "@/components/ImageSlot";
 import PhoneMockup from "@/components/PhoneMockup";
 import ProjectCard from "@/components/ProjectCard";
-import ServiceIllustration from "@/components/ServiceIllustration";
+import ServiceMedia from "@/components/ServiceMedia";
 import SkillsSection from "@/components/SkillsSection";
 import { projects, services, engagements, testimonials } from "@/lib/projects";
 import { SITE_NAME, GITHUB_URL, IMAGES } from "@/lib/siteConfig";
@@ -61,11 +61,7 @@ export default function Home() {
           {services.map((s) => (
             <li key={s.title} className="grid items-center gap-2 bg-paper p-3 sm:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] sm:gap-5 sm:p-4">
               <div className="relative aspect-[5/3] overflow-hidden rounded-md">
-                {s.image ? (
-                  <ImageSlot src={s.image} alt={`${s.title} illustration`} ratio="absolute inset-0" />
-                ) : (
-                  <ServiceIllustration name={s.icon} />
-                )}
+                <ServiceMedia src={s.image} name={s.icon} alt={`${s.title} illustration`} />
               </div>
               <div className="px-3 pb-3 pt-4 sm:px-0 sm:py-2 sm:pr-3">
                 <h3 className="font-display text-xl font-semibold text-ink">{s.title}</h3>
