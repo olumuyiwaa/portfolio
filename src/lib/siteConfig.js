@@ -11,6 +11,11 @@ export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "oladoyine
 export const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/olumuyiwaa";
 export const LINKEDIN_URL = process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/emmanueloladoyin";
 
+// Profile photo shown on the About page. Defaults to the GitHub profile picture;
+// set IMAGES.about to a local file, or NEXT_PUBLIC_PORTRAIT_URL, to override.
+export const PORTRAIT_URL =
+  process.env.NEXT_PUBLIC_PORTRAIT_URL || `${GITHUB_URL}.png?size=800`;
+
 // Site-level images. Drop files in public/images and set the path here,
 // for example "/images/hero.jpg". Empty strings render a blank placeholder.
 export const IMAGES = {

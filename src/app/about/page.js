@@ -1,8 +1,8 @@
 import Link from "next/link";
-import ImageSlot from "@/components/ImageSlot";
 import SkillsSection from "@/components/SkillsSection";
 import { projects } from "@/lib/projects";
-import { SITE_NAME, ROLE, IMAGES, GITHUB_URL } from "@/lib/siteConfig";
+import { SITE_NAME, ROLE, IMAGES, GITHUB_URL, PORTRAIT_URL } from "@/lib/siteConfig";
+import Portrait from "@/components/Portrait";
 
 const PRINCIPLES = [
   {
@@ -29,7 +29,7 @@ export default function AboutPage() {
   return (
     <>
       <section className="container-page py-14 md:py-20">
-        <div className={IMAGES.about ? "grid items-center gap-10 md:grid-cols-[1.2fr_0.8fr]" : ""}>
+        <div className="grid items-center gap-10 md:grid-cols-[1.2fr_0.8fr] md:gap-14">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold text-sage-700">About</p>
             <h1 className="mt-2 max-w-3xl font-display text-5xl font-extrabold text-ink md:text-6xl">
@@ -56,14 +56,10 @@ export default function AboutPage() {
               </Link>
             </div>
           </div>
-          <ImageSlot
-            src={IMAGES.about}
+          <Portrait
+            src={IMAGES.about || PORTRAIT_URL}
             alt={`Portrait of ${SITE_NAME}`}
-            ratio="aspect-[4/5]"
-            className="rounded-xl"
-            sizes="(min-width: 768px) 35vw, 100vw"
-            priority
-            hideWhenEmpty
+            className="max-w-sm md:justify-self-end"
           />
         </div>
 
