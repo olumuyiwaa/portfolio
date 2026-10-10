@@ -57,7 +57,6 @@ export default function Home() {
             One developer for the whole product, or for the one part you are missing.
           </p>
         </div>
-        </div>
         <ul className="mt-12 grid gap-px overflow-hidden rounded-lg border border-stone-200 bg-stone-200 lg:grid-cols-2">
           {services.map((s) => (
             <li key={s.title} className="grid items-center gap-2 bg-paper p-3 sm:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] sm:gap-5 sm:p-4">
