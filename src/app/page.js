@@ -57,9 +57,9 @@ export default function Home() {
             One developer for the whole product, or for the one part you are missing.
           </p>
         </div>
-        <ul className="mt-12 grid gap-px overflow-hidden rounded-lg border border-stone-200 bg-stone-200 md:grid-cols-2">
+        <ul className="mt-12 grid gap-px overflow-hidden rounded-lg border border-stone-200 bg-stone-200 lg:grid-cols-2">
           {services.map((s) => (
-            <li key={s.title} className="bg-paper p-3 md:p-4">
+            <li key={s.title} className="grid items-center gap-2 bg-paper p-3 sm:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] sm:gap-5 sm:p-4">
               <div className="relative aspect-[5/3] overflow-hidden rounded-md">
                 {s.image ? (
                   <ImageSlot src={s.image} alt={`${s.title} illustration`} ratio="absolute inset-0" />
@@ -67,7 +67,7 @@ export default function Home() {
                   <ServiceIllustration name={s.icon} />
                 )}
               </div>
-              <div className="px-3 pb-4 pt-6 md:px-4">
+              <div className="px-3 pb-3 pt-4 sm:px-0 sm:py-2 sm:pr-3">
                 <h3 className="font-display text-xl font-semibold text-ink">{s.title}</h3>
                 <p className="mt-2 max-w-md text-sm leading-relaxed text-stone-600">{s.description}</p>
                 <p className="mt-4 text-sm text-sage-700">{s.stack.join(", ")}</p>
