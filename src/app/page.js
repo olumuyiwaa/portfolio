@@ -2,7 +2,7 @@ import Link from "next/link";
 import ImageSlot from "@/components/ImageSlot";
 import PhoneMockup from "@/components/PhoneMockup";
 import ProjectCard from "@/components/ProjectCard";
-import ServiceIcon from "@/components/ServiceIcon";
+import ServiceIllustration from "@/components/ServiceIllustration";
 import SkillsSection from "@/components/SkillsSection";
 import { projects, services, engagements, testimonials } from "@/lib/projects";
 import { SITE_NAME, GITHUB_URL, IMAGES } from "@/lib/siteConfig";
@@ -59,13 +59,19 @@ export default function Home() {
         </div>
         <ul className="mt-12 grid gap-px overflow-hidden rounded-lg border border-stone-200 bg-stone-200 md:grid-cols-2">
           {services.map((s) => (
-            <li key={s.title} className="bg-paper p-7 md:p-8">
-              <span className="relative block h-12 w-12 rounded-md bg-sage-50">
-                <ServiceIcon name={s.icon} className="h-6 w-6" />
-              </span>
-              <h3 className="mt-6 font-display text-xl font-semibold text-ink">{s.title}</h3>
-              <p className="mt-2 max-w-md text-sm leading-relaxed text-stone-600">{s.description}</p>
-              <p className="mt-4 text-sm text-sage-700">{s.stack.join(", ")}</p>
+            <li key={s.title} className="bg-paper p-3 md:p-4">
+              <div className="relative aspect-[5/3] overflow-hidden rounded-md">
+                {s.image ? (
+                  <ImageSlot src={s.image} alt={`${s.title} illustration`} ratio="absolute inset-0" />
+                ) : (
+                  <ServiceIllustration name={s.icon} />
+                )}
+              </div>
+              <div className="px-3 pb-4 pt-6 md:px-4">
+                <h3 className="font-display text-xl font-semibold text-ink">{s.title}</h3>
+                <p className="mt-2 max-w-md text-sm leading-relaxed text-stone-600">{s.description}</p>
+                <p className="mt-4 text-sm text-sage-700">{s.stack.join(", ")}</p>
+              </div>
             </li>
           ))}
         </ul>
