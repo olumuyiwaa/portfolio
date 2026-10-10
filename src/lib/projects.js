@@ -15,7 +15,7 @@ export const projects = [
     name: "One Universe",
     kind: "Services marketplace app",
     category: "Mobile",
-    image: "",
+    image: "/images/projects/one-universe.jpg",
     gallery: blank(2),
     summary:
       "A Flutter marketplace app that connects people in Nigeria with verified service providers, with escrow-held payments, in-app wallet and live location matching.",
