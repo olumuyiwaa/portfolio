@@ -71,7 +71,7 @@ export const projects = [
     name: "Founder Thrive",
     kind: "Wellbeing app for founders",
     category: "Mobile",
-    image: "",
+    image: "/images/projects/founder-thrive.jpg",
     gallery: blank(2),
     summary:
       "A Flutter wellbeing app that helps startup founders spot early signs of burnout through daily check-ins, progress reports and guided resources.",
