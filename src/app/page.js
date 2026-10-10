@@ -51,9 +51,9 @@ export default function Home() {
       </section>
 
       <section id="services" className="container-page scroll-mt-20 border-t border-stone-200 py-20 md:py-28">
-        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-          <div>
-            <h2 className="max-w-md font-display text-3xl font-bold text-ink md:text-4xl">What I can build for you</h2>
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,400px)_minmax(0,1fr)] lg:gap-16">
+          <div className="lg:sticky lg:top-28 lg:self-start">
+            <h2 className="font-display text-3xl font-bold text-ink md:text-4xl">What I can build for you</h2>
             <p className="mt-4 max-w-md text-stone-600">
               One developer for the whole product, or for the one part you are missing.
             </p>
@@ -66,7 +66,7 @@ export default function Home() {
                 </span>
                 <div>
                   <h3 className="font-display text-xl font-semibold text-ink">{s.title}</h3>
-                  <p className="mt-2 max-w-lg text-sm leading-relaxed text-stone-600">{s.description}</p>
+                  <p className="mt-2 max-w-xl text-sm leading-relaxed text-stone-600">{s.description}</p>
                   <p className="mt-3 text-sm text-sage-700">{s.stack.join(", ")}</p>
                 </div>
               </li>
