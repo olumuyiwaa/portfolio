@@ -301,56 +301,57 @@ export const projects = [
     links: [{ label: "Visit migrantifly.com", href: "https://migrantifly.com" }],
     featured: false,
   },
-  {
-    slug: "dryva",
-    name: "DRYVA",
-    kind: "Logistics operations platform",
-    category: "Full-stack",
-    image: "",
-    gallery: blank(2),
-    summary:
-      "An operations dashboard and API for a trucking, haulage and warehousing company: orders, inventory, cycle counts and a transport loading board.",
-    overview: [
-      "DRYVA brings a logistics company's day-to-day operations into one system. Warehouse staff manage stock, transport teams match loads with trucks and drivers, and finance and admins track orders and documents. Customers can follow a shipment with a public tracking link.",
-      "I built the NestJS API and the Next.js operations dashboard.",
-    ],
-    role: "Built the API and the operations dashboard.",
-    platforms: ["Web"],
-    availability: "",
-    features: [
-      {
-        title: "Orders",
-        text: "An order lifecycle from pending to delivered, with stock issued when an order is packed.",
-      },
-      {
-        title: "Warehouse and inventory",
-        text: "Products, multiple warehouses, goods receipts, stock movements and cycle counts that reconcile against the system.",
-      },
-      {
-        title: "Transport and loading board",
-        text: "Trucks, vessels and drivers, with loads matched to the right asset for road, ocean, air or rail.",
-      },
-      {
-        title: "Tracking and documents",
-        text: "A public shipment tracking page, document management and cold-chain temperature logs.",
-      },
-    ],
-    engineering: [
-      "Anything that changes stock (receipts, packing, cycle-count reconciliation) runs in a database transaction, so the movement ledger and quantities never disagree.",
-      "Order statuses follow a transition map that rejects illegal moves.",
-      "Five roles, applied per endpoint: admin, warehouse staff, transport operations, finance and client.",
-      "The dashboard is driven by a resource registry, so adding a new module means adding one configuration entry.",
-      "Public tracking is rate limited per IP.",
-    ],
-    stats: [
-      { value: "19", label: "Data models" },
-      { value: "75+", label: "API routes" },
-      { value: "26", label: "Dashboard resources" },
-    ],
-    stack: ["NestJS", "TypeScript", "Prisma", "MongoDB", "Next.js", "Tailwind CSS"],
-    links: [{ label: "Open the dashboard", href: "https://dryvahub.netlify.app" }],
-    featured: false,
-  },
+// DRYVA is hidden for now (waiting on a cover screenshot). Remove the leading "// " on the block below to restore it.
+//   {
+//     slug: "dryva",
+//     name: "DRYVA",
+//     kind: "Logistics operations platform",
+//     category: "Full-stack",
+//     image: "",
+//     gallery: blank(2),
+//     summary:
+//       "An operations dashboard and API for a trucking, haulage and warehousing company: orders, inventory, cycle counts and a transport loading board.",
+//     overview: [
+//       "DRYVA brings a logistics company's day-to-day operations into one system. Warehouse staff manage stock, transport teams match loads with trucks and drivers, and finance and admins track orders and documents. Customers can follow a shipment with a public tracking link.",
+//       "I built the NestJS API and the Next.js operations dashboard.",
+//     ],
+//     role: "Built the API and the operations dashboard.",
+//     platforms: ["Web"],
+//     availability: "",
+//     features: [
+//       {
+//         title: "Orders",
+//         text: "An order lifecycle from pending to delivered, with stock issued when an order is packed.",
+//       },
+//       {
+//         title: "Warehouse and inventory",
+//         text: "Products, multiple warehouses, goods receipts, stock movements and cycle counts that reconcile against the system.",
+//       },
+//       {
+//         title: "Transport and loading board",
+//         text: "Trucks, vessels and drivers, with loads matched to the right asset for road, ocean, air or rail.",
+//       },
+//       {
+//         title: "Tracking and documents",
+//         text: "A public shipment tracking page, document management and cold-chain temperature logs.",
+//       },
+//     ],
+//     engineering: [
+//       "Anything that changes stock (receipts, packing, cycle-count reconciliation) runs in a database transaction, so the movement ledger and quantities never disagree.",
+//       "Order statuses follow a transition map that rejects illegal moves.",
+//       "Five roles, applied per endpoint: admin, warehouse staff, transport operations, finance and client.",
+//       "The dashboard is driven by a resource registry, so adding a new module means adding one configuration entry.",
+//       "Public tracking is rate limited per IP.",
+//     ],
+//     stats: [
+//       { value: "19", label: "Data models" },
+//       { value: "75+", label: "API routes" },
+//       { value: "26", label: "Dashboard resources" },
+//     ],
+//     stack: ["NestJS", "TypeScript", "Prisma", "MongoDB", "Next.js", "Tailwind CSS"],
+//     links: [{ label: "Open the dashboard", href: "https://dryvahub.netlify.app" }],
+//     featured: false,
+//   },
   {
     slug: "afro-flavours",
     name: "Afro Flavours",
