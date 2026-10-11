@@ -23,6 +23,8 @@ export const metadata = {
   },
   description: DEFAULT_DESCRIPTION,
   keywords: [
+    "Emmanuel Oladoyin",
+    "Oladoyin Emmanuel",
     "Software Engineer",
     "Flutter Developer",
     "Software Engineer Lagos",
