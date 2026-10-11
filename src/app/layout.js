@@ -23,6 +23,8 @@ export const metadata = {
   },
   description: DEFAULT_DESCRIPTION,
   keywords: [
+    "Software Engineer",
+    "Flutter Developer",
     "Software Engineer Lagos",
     "Flutter Developer Nigeria",
     "Next.js Developer",
