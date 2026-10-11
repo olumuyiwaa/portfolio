@@ -16,7 +16,13 @@ export const projects = [
     kind: "Services marketplace app",
     category: "Mobile",
     image: "/images/projects/one-universe.jpg",
-    gallery: blank(2),
+    gallery: [
+      "/images/projects/one-universe-1.png",
+      "/images/projects/one-universe-2.png",
+      "/images/projects/one-universe-3.png",
+      "/images/projects/one-universe-4.png",
+    ],
+    galleryKind: "phone",
     summary:
       "A Flutter marketplace app that connects people in Nigeria with verified service providers, with escrow-held payments, in-app wallet and live location matching.",
     overview: [

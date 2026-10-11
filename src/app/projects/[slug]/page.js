@@ -131,7 +131,26 @@ export default function ProjectPage({ params }) {
         </aside>
       </div>
 
-      {p.gallery?.some(Boolean) && (
+      {p.gallery?.some(Boolean) && p.galleryKind === "phone" && (
+        <section className="mt-14">
+          <h2 className="font-display text-2xl font-bold text-ink">App screens</h2>
+          <ul className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+            {p.gallery.filter(Boolean).map((src, idx) => (
+              <li key={idx}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={src}
+                  alt={`${p.name} app screen ${idx + 1}`}
+                  loading="lazy"
+                  className="block aspect-[272/592] w-full rounded-xl border border-stone-200 bg-paper object-cover"
+                />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {p.gallery?.some(Boolean) && p.galleryKind !== "phone" && (
         <div className="mt-14 grid gap-6 sm:grid-cols-2">
           {p.gallery.filter(Boolean).map((src, idx) => (
             <ImageSlot key={idx} src={src} alt={`${p.name} screenshot ${idx + 1}`} ratio="aspect-[16/10]" className="rounded-lg" sizes="(min-width: 640px) 50vw, 100vw" />
