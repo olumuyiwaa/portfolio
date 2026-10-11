@@ -23,6 +23,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: SITE_NAME,
+  alternateName: "Oladoyin Emmanuel",
   jobTitle: ROLE,
   url: SITE_URL,
   description: DEFAULT_DESCRIPTION,

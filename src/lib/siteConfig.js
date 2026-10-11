@@ -1,11 +1,11 @@
-export const SITE_NAME = "Emmanuel";
+export const SITE_NAME = "Emmanuel Oladoyin";
 export const ROLE = "Software engineer";
 
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://emmanueloladoyin.netlify.app";
 
 export const DEFAULT_DESCRIPTION =
-  "Software engineer and technical contractor in Lagos, Nigeria. I build Flutter apps for iOS and Android, plus the web dashboards and backends behind them.";
+  "Emmanuel Oladoyin is a software engineer and technical contractor in Lagos, Nigeria. He builds Flutter apps for iOS and Android, plus the web dashboards and backends behind them.";
 
 export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "oladoyinemmanuel@gmail.com";
 export const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/olumuyiwaa";
