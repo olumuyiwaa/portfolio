@@ -85,7 +85,17 @@ export const projects = [
     kind: "Wellbeing app for founders",
     category: "Mobile",
     image: "/images/projects/founder-thrive.jpg",
-    gallery: blank(2),
+    gallery: [
+      "/images/projects/founder-thrive-1.png",
+      "/images/projects/founder-thrive-2.png",
+      "/images/projects/founder-thrive-3.png",
+      "/images/projects/founder-thrive-4.png",
+      "/images/projects/founder-thrive-5.png",
+      "/images/projects/founder-thrive-6.png",
+      "/images/projects/founder-thrive-7.png",
+      "/images/projects/founder-thrive-8.png",
+    ],
+    galleryKind: "phone",
     summary:
       "A Flutter wellbeing app that helps startup founders spot early signs of burnout through daily check-ins, progress reports and guided resources.",
     overview: [
