@@ -134,7 +134,7 @@ export default function ProjectPage({ params }) {
       {p.gallery?.some(Boolean) && p.galleryKind === "phone" && (
         <section className="mt-14">
           <h2 className="font-display text-2xl font-bold text-ink">App screens</h2>
-          <ul className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+          <ul className="mt-6 grid grid-cols-3 gap-2 sm:gap-4 md:grid-cols-4 md:gap-6">
             {p.gallery.filter(Boolean).map((src, idx) => (
               <li key={idx}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -142,7 +142,7 @@ export default function ProjectPage({ params }) {
                   src={src}
                   alt={`${p.name} app screen ${idx + 1}`}
                   loading="lazy"
-                  className="block aspect-[272/592] w-full rounded-xl border border-stone-200 bg-paper object-cover"
+                  className="block aspect-[272/592] w-full rounded-lg sm:rounded-xl border border-stone-200 bg-paper object-cover"
                 />
               </li>
             ))}
