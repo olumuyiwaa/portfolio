@@ -189,7 +189,7 @@ export const projects = [
     name: "CleanSera",
     kind: "SaaS for cleaning businesses",
     category: "Full-stack",
-    image: "",
+    image: "/images/projects/cleansera.jpg",
     gallery: blank(2),
     summary:
       "A multi-tenant SaaS for cleaning companies: branded booking, smart dispatch, recurring schedules, payroll and a cleaner app, sold as a flat subscription with no commission.",
