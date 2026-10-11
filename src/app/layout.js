@@ -6,13 +6,53 @@ import { SITE_NAME, SITE_URL, ROLE, DEFAULT_DESCRIPTION, GITHUB_URL, LINKEDIN_UR
 const FONTS_URL =
   "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap";
 
+// export const metadata = {
+//   metadataBase: new URL(SITE_URL),
+//   title: { default: `${SITE_NAME} — ${ROLE}`, template: `%s | ${SITE_NAME}` },
+//   description: DEFAULT_DESCRIPTION,
+//   alternates: { canonical: SITE_URL },
+//   openGraph: { siteName: SITE_NAME, type: "website", url: SITE_URL },
+//   twitter: { card: "summary_large_image" },
+// };
+
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: `${SITE_NAME} — ${ROLE}`, template: `%s | ${SITE_NAME}` },
+  title: {
+    default: `${SITE_NAME} — ${ROLE}`,
+    template: `%s | ${SITE_NAME}`
+  },
   description: DEFAULT_DESCRIPTION,
-  alternates: { canonical: SITE_URL },
-  openGraph: { siteName: SITE_NAME, type: "website", url: SITE_URL },
-  twitter: { card: "summary_large_image" },
+  keywords: [
+    "Software Engineer Lagos",
+    "Flutter Developer Nigeria",
+    "Next.js Developer",
+    "Node.js Backend Developer",
+    "Full Stack Developer",
+  ],
+  alternates: {
+    canonical: SITE_URL
+  },
+  openGraph: {
+    siteName: SITE_NAME,
+    type: "website",
+    url: SITE_URL,
+    title: `${SITE_NAME} — ${ROLE}`,
+    description: DEFAULT_DESCRIPTION,
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: `${SITE_NAME} - ${ROLE}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} — ${ROLE}`,
+    description: DEFAULT_DESCRIPTION,
+    images: ["/og-image.jpg"],
+  },
 };
 
 export const viewport = {
