@@ -10,13 +10,13 @@ export default function Footer() {
           <p className="mt-1 text-sm text-stone-500">Software engineer in Lagos, Nigeria</p>
         </div>
         <ul className="flex flex-wrap gap-5 text-sm text-stone-500">
-          <li><Link href="/#services" className="hover:text-sage-700">Services</Link></li>
-          <li><Link href="/projects" className="hover:text-sage-700">Work</Link></li>
-          <li><Link href="/about" className="hover:text-sage-700">About</Link></li>
-          <li><a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-sage-700">Email</a></li>
-          <li><a href={GITHUB_URL} className="hover:text-sage-700" target="_blank" rel="noreferrer">GitHub</a></li>
+          <li><Link href="/#services" className="hover:text-accent">Services</Link></li>
+          <li><Link href="/projects" className="hover:text-accent">Work</Link></li>
+          <li><Link href="/about" className="hover:text-accent">About</Link></li>
+          <li><a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-accent">Email</a></li>
+          <li><a href={GITHUB_URL} className="hover:text-accent" target="_blank" rel="noreferrer">GitHub</a></li>
           {LINKEDIN_URL && (
-            <li><a href={LINKEDIN_URL} className="hover:text-sage-700" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li><a href={LINKEDIN_URL} className="hover:text-accent" target="_blank" rel="noreferrer">LinkedIn</a></li>
           )}
         </ul>
       </div>

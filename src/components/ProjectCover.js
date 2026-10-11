@@ -5,8 +5,8 @@ import ImageSlot from "@/components/ImageSlot";
 // the real image is shown instead.
 const TINTS = [
   "bg-sage-700 text-white",
-  "bg-ink text-amber-300",
-  "bg-amber-100 text-ink",
+  "bg-panel text-amber-300",
+  "bg-amber-100 text-night",
   "bg-sage-200 text-sage-900",
 ];
 

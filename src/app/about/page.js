@@ -31,7 +31,7 @@ export default function AboutPage() {
       <section className="container-page py-14 md:py-20">
         <div className="grid items-center gap-10 md:grid-cols-[1.2fr_0.8fr] md:gap-14">
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold text-sage-700">About</p>
+            <p className="text-sm font-semibold text-accent">About</p>
             <h1 className="mt-2 max-w-3xl font-display text-5xl font-extrabold text-ink md:text-6xl">
               {ROLE} who ships the whole product
             </h1>
@@ -48,7 +48,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/contact" className="rounded-md bg-ink px-5 py-3 text-sm font-semibold text-paper transition-colors hover:bg-sage-800">
+              <Link href="/contact" className="rounded-md bg-ink px-5 py-3 text-sm font-semibold text-paper transition-colors hover:bg-hover">
                 Work with me
               </Link>
               <Link href="/projects" className="rounded-md border border-stone-300 px-5 py-3 text-sm font-semibold text-ink transition-colors hover:bg-stone-100">
@@ -103,7 +103,7 @@ export default function AboutPage() {
         <div className="container-page">
           <div className="flex items-end justify-between gap-4">
             <h2 className="font-display text-3xl font-bold text-ink md:text-4xl">Recent work</h2>
-            <Link href="/projects" className="text-sm font-semibold text-sage-700 hover:underline">All projects</Link>
+            <Link href="/projects" className="text-sm font-semibold text-accent hover:underline">All projects</Link>
           </div>
           <ul className="mt-8 divide-y divide-stone-200 border-y border-stone-200">
             {recent.map((p) => (
@@ -113,7 +113,7 @@ export default function AboutPage() {
                     <span className="block font-display text-lg font-semibold text-ink">{p.name}</span>
                     <span className="block text-sm text-stone-600">{p.kind} · {p.stack.slice(0, 3).join(", ")}</span>
                   </span>
-                  <span aria-hidden="true" className="text-stone-400 transition-transform group-hover:translate-x-1 group-hover:text-sage-700">→</span>
+                  <span aria-hidden="true" className="text-stone-400 transition-transform group-hover:translate-x-1 group-hover:text-accent">→</span>
                 </Link>
               </li>
             ))}
@@ -122,17 +122,17 @@ export default function AboutPage() {
       </section>
 
       <section className="container-page pb-20 md:pb-28">
-        <div className="rounded-xl bg-ink p-8 text-paper md:p-14">
+        <div className="rounded-xl bg-panel p-8 text-white md:p-14">
           <h2 className="max-w-xl font-display text-2xl font-bold md:text-3xl">Let&apos;s work together</h2>
-          <p className="mt-3 max-w-xl text-stone-300">
+          <p className="mt-3 max-w-xl text-white/70">
             I take on fixed-scope projects, monthly retainers and embedded contractor roles.
             Tell me what you&apos;re building.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-3">
-            <Link href="/contact" className="rounded-md bg-paper px-5 py-3 text-sm font-semibold text-ink transition-colors hover:bg-sage-100">
+            <Link href="/contact" className="rounded-md bg-white px-5 py-3 text-sm font-semibold text-night transition-colors hover:bg-[#DCEBE1]">
               Start a conversation
             </Link>
-            <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="rounded-md px-3 py-3 text-sm font-semibold text-stone-300 hover:text-paper">
+            <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="rounded-md px-3 py-3 text-sm font-semibold text-white/70 hover:text-white">
               GitHub ↗
             </a>
           </div>

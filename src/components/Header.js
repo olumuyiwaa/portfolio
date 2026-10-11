@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { SITE_NAME } from "@/lib/siteConfig";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const NAV_ITEMS = [
   { label: "Services", href: "/#services" },
@@ -45,7 +46,7 @@ export default function Header() {
     >
       <div className="container-page flex items-center justify-between gap-6 py-4">
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-sage-600 text-paper font-display font-semibold">
+          <span className="grid h-9 w-9 place-items-center rounded-xl bg-sage-600 text-white font-display font-semibold">
             {SITE_NAME[0]}
           </span>
           <span className="font-display text-lg font-semibold text-ink">{SITE_NAME}</span>
@@ -58,7 +59,7 @@ export default function Header() {
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
               className={`rounded-sm px-3 py-2 text-sm font-medium transition-colors ${
-                isActive(item.href) ? "text-sage-700 bg-sage-50" : "text-stone-600 hover:text-ink"
+                isActive(item.href) ? "text-accent bg-sage-50" : "text-stone-600 hover:text-ink"
               }`}
             >
               {item.label}
@@ -66,17 +67,20 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:block shrink-0">
+        <div className="hidden shrink-0 items-center gap-2 md:flex">
+          <ThemeToggle />
           <Link
             href="/contact"
-            className="rounded-md bg-ink px-4 py-2 text-sm font-semibold text-paper hover:bg-sage-800 transition-colors"
+            className="rounded-md bg-ink px-4 py-2 text-sm font-semibold text-paper hover:bg-hover transition-colors"
           >
             Get a quote
           </Link>
         </div>
 
+        <div className="flex items-center gap-2 md:hidden">
+        <ThemeToggle />
         <button
-          className="md:hidden grid h-9 w-9 place-items-center rounded-sm border border-stone-200"
+          className="grid h-9 w-9 place-items-center rounded-sm border border-stone-200"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -87,6 +91,7 @@ export default function Header() {
             <span className={`absolute left-0 bottom-0 h-[2px] w-full bg-ink transition-transform ${menuOpen ? "-translate-y-[5px] -rotate-45" : ""}`} />
           </span>
         </button>
+        </div>
       </div>
 
       {menuOpen && (

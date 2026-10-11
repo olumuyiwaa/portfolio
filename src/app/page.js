@@ -24,7 +24,7 @@ export default function Home() {
             and restaurant backends.
           </p>
           <div className="animate-fade-up mt-9 flex flex-wrap items-center gap-3" style={{ animationDelay: "0.2s" }}>
-            <Link href="/projects" className="rounded-md bg-ink px-6 py-3.5 text-sm font-semibold text-paper transition-colors hover:bg-sage-800">
+            <Link href="/projects" className="rounded-md bg-ink px-6 py-3.5 text-sm font-semibold text-paper transition-colors hover:bg-hover">
               See my work
             </Link>
             <Link href="/contact" className="rounded-md border border-stone-300 px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-ink">
@@ -66,7 +66,7 @@ export default function Home() {
               <div className="px-3 pb-3 pt-4 sm:px-0 sm:py-2 sm:pr-3">
                 <h3 className="font-display text-xl font-semibold text-ink">{s.title}</h3>
                 <p className="mt-2 max-w-md text-sm leading-relaxed text-stone-600">{s.description}</p>
-                <p className="mt-4 text-sm text-sage-700">{s.stack.join(", ")}</p>
+                <p className="mt-4 text-sm text-accent">{s.stack.join(", ")}</p>
               </div>
             </li>
           ))}
@@ -76,7 +76,7 @@ export default function Home() {
       <section className="container-page border-t border-stone-200 py-20 md:py-28">
         <div className="flex items-end justify-between gap-4">
           <h2 className="font-display text-3xl font-bold text-ink md:text-4xl">Selected work</h2>
-          <Link href="/projects" className="text-sm font-semibold text-sage-700 hover:underline">All projects</Link>
+          <Link href="/projects" className="text-sm font-semibold text-accent hover:underline">All projects</Link>
         </div>
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {featured.map((p) => <ProjectCard key={p.slug} project={p} />)}
@@ -90,7 +90,7 @@ export default function Home() {
             <div key={e.title} className="border-t-2 border-ink pt-6">
               <h3 className="font-display text-xl font-semibold text-ink">{e.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-stone-600">{e.description}</p>
-              <p className="mt-4 text-sm text-sage-700">Good for: {e.fit}</p>
+              <p className="mt-4 text-sm text-accent">Good for: {e.fit}</p>
             </div>
           ))}
         </div>
@@ -123,14 +123,14 @@ export default function Home() {
       )}
 
       <section className="container-page pb-20 md:pb-28">
-        <div className="rounded-xl bg-ink px-6 py-14 text-center md:px-12 md:py-20">
-          <h2 className="mx-auto max-w-xl font-display text-3xl font-bold text-paper md:text-5xl">
+        <div className="rounded-xl bg-panel px-6 py-14 text-center md:px-12 md:py-20">
+          <h2 className="mx-auto max-w-xl font-display text-3xl font-bold text-white md:text-5xl">
             Have something to build?
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-stone-300">
+          <p className="mx-auto mt-4 max-w-lg text-white/70">
             I take on contract projects end to end or slot into an existing team.
           </p>
-          <Link href="/contact" className="mt-8 inline-block rounded-md bg-paper px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:bg-sage-100">
+          <Link href="/contact" className="mt-8 inline-block rounded-md bg-white px-6 py-3.5 text-sm font-semibold text-night transition-colors hover:bg-[#DCEBE1]">
             Start a conversation
           </Link>
         </div>

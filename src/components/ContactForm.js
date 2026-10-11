@@ -58,14 +58,14 @@ export default function ContactForm() {
     }
   };
 
-  const field = "mt-1.5 w-full rounded-md border border-stone-300 bg-white px-3.5 py-3 text-sm placeholder:text-stone-400 outline-none focus:border-sage-500 focus-visible:outline-none focus:ring-2 focus:ring-sage-200";
+  const field = "mt-1.5 w-full rounded-md border border-stone-300 bg-paper px-3.5 py-3 text-sm placeholder:text-stone-400 outline-none focus:border-sage-500 focus-visible:outline-none focus:ring-2 focus:ring-sage-200";
 
   if (status === "sent") {
     return (
       <div role="status" className="rounded-lg bg-sage-50 p-6">
         <h2 className="font-display text-xl font-bold text-ink">Message sent</h2>
         <p className="mt-2 text-stone-600">Thanks for reaching out. I will reply with next steps soon.</p>
-        <button type="button" onClick={() => setStatus("idle")} className="mt-4 text-sm font-semibold text-sage-700 underline underline-offset-2">
+        <button type="button" onClick={() => setStatus("idle")} className="mt-4 text-sm font-semibold text-accent underline underline-offset-2">
           Send another message
         </button>
       </div>
@@ -130,7 +130,7 @@ export default function ContactForm() {
 
       <button
         disabled={status === "sending"}
-        className="w-full rounded-md bg-ink px-5 py-3 text-sm font-semibold text-paper transition-colors hover:bg-sage-800 disabled:opacity-60 sm:w-auto"
+        className="w-full rounded-md bg-ink px-5 py-3 text-sm font-semibold text-paper transition-colors hover:bg-hover disabled:opacity-60 sm:w-auto"
       >
         {status === "sending" ? "Sending…" : "Send message"}
       </button>
@@ -141,7 +141,7 @@ export default function ContactForm() {
       {status === "fallback" && (
         <p role="status" className="rounded-md bg-sage-50 p-4 text-sm leading-relaxed text-stone-700">
           I could not send this directly, so your email app should open with the message ready to send. Nothing happened?{" "}
-          <button type="button" onClick={copyEmail} className="font-semibold text-sage-700 underline underline-offset-2">
+          <button type="button" onClick={copyEmail} className="font-semibold text-accent underline underline-offset-2">
             {copied ? "Address copied" : "Copy my email address"}
           </button>{" "}
           and write to me directly.

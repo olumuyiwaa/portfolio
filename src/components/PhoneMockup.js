@@ -40,7 +40,7 @@ const delay = (s) => ({ animationDelay: `${s}s` });
 export default function PhoneMockup() {
   return (
     <div className="relative mx-auto w-[270px] md:w-[300px]" aria-hidden="true">
-      <div className="phone-in rounded-[44px] bg-ink p-[10px] ring-1 ring-stone-300">
+      <div className="phone-in rounded-[44px] bg-night p-[10px] ring-1 ring-stone-300">
         <div className="relative aspect-[9/19] overflow-hidden rounded-[35px] bg-[#0b0b0b] text-white">
           {/* status bar */}
           <div className="flex items-center justify-between px-6 pt-3 text-[10px] font-semibold">
@@ -85,7 +85,7 @@ export default function PhoneMockup() {
 
             {/* promo */}
             <div
-              className="row-in relative mt-3 overflow-hidden rounded-2xl px-3.5 py-3 text-ink"
+              className="row-in relative mt-3 overflow-hidden rounded-2xl px-3.5 py-3 text-night"
               style={{ ...delay(0.74), background: ACCENT }}
             >
               <p className="font-display text-[14px] font-extrabold leading-tight">Send a package →</p>
@@ -133,7 +133,7 @@ export default function PhoneMockup() {
                   <span className="h-4 w-4 rounded-full" style={{ background: "#3a2a12" }} />
                   Courier en route
                 </span>
-                <span className="rounded-full px-1.5 py-0.5 text-[7.5px] font-bold text-ink" style={{ background: ACCENT }}>
+                <span className="rounded-full px-1.5 py-0.5 text-[7.5px] font-bold text-night" style={{ background: ACCENT }}>
                   18 min ETA
                 </span>
               </div>
@@ -185,7 +185,7 @@ export default function PhoneMockup() {
         </div>
       </div>
 
-      <span className="row-in absolute -left-14 top-[58%] hidden rounded-full bg-amber-300 px-3.5 py-1.5 text-sm font-semibold text-ink sm:block" style={delay(1.4)}>
+      <span className="row-in absolute -left-14 top-[58%] hidden rounded-full bg-amber-300 px-3.5 py-1.5 text-sm font-semibold text-night sm:block" style={delay(1.4)}>
         Flutter
       </span>
     </div>

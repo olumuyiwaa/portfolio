@@ -1,22 +1,30 @@
+// Theme colours are CSS variables (see globals.css) so light/dark can swap them.
+const v = (name) => `rgb(var(--${name}) / <alpha-value>)`;
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
-        paper: "#FFFFFF",
-        ink: "#101814",
+        paper: v("paper"),
+        ink: v("ink"),
+        night: "#101814",
+        panel: v("panel"),
+        accent: v("accent"),
+        hover: v("hover"),
         sage: {
-          50: "#EEF5F0",
-          100: "#DCEBE1",
-          200: "#BCD8C6",
+          50: v("sage-50"),
+          100: v("sage-100"),
+          200: v("sage-200"),
           300: "#8DBFA2",
           400: "#4E9E78",
           500: "#1F8A62",
           600: "#137352",
           700: "#0E5C42",
           800: "#0B4733",
-          900: "#082F23",
+          900: v("sage-900"),
         },
         amber: {
           50: "#FFF4E5",
@@ -27,14 +35,14 @@ module.exports = {
           700: "#A15F08",
         },
         stone: {
-          50: "#FAF9F6",
-          100: "#F1EFE9",
-          200: "#E2DED3",
-          300: "#C9C3B3",
-          400: "#9A9484",
-          500: "#6B6455",
-          600: "#54503F",
-          700: "#3D392D",
+          50: v("stone-50"),
+          100: v("stone-100"),
+          200: v("stone-200"),
+          300: v("stone-300"),
+          400: v("stone-400"),
+          500: v("stone-500"),
+          600: v("stone-600"),
+          700: v("stone-700"),
         },
       },
       fontFamily: {

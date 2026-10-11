@@ -16,8 +16,14 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#F8F7F3",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F8F7F3" },
+    { media: "(prefers-color-scheme: dark)", color: "#0E1311" },
+  ],
 };
+
+// Runs before first paint so the saved (or system) theme never flashes.
+const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}if(t==="dark")document.documentElement.classList.add("dark")}catch(e){}})();`;
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -33,8 +39,9 @@ const structuredData = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="stylesheet" href={FONTS_URL} />

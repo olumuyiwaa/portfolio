@@ -24,8 +24,8 @@ export default function ProjectPage({ params }) {
   return (
     <article className="container-page py-14 md:py-20">
       <div className="max-w-3xl">
-        <Link href="/projects" className="text-sm font-semibold text-sage-700 hover:underline">Back to all work</Link>
-        <p className="mt-6 text-sm font-medium text-sage-600">{p.kind}</p>
+        <Link href="/projects" className="text-sm font-semibold text-accent hover:underline">Back to all work</Link>
+        <p className="mt-6 text-sm font-medium text-accent">{p.kind}</p>
         <h1 className="mt-1 font-display text-4xl font-extrabold text-ink md:text-5xl">{p.name}</h1>
         <p className="mt-5 text-lg leading-relaxed text-stone-600">{p.summary}</p>
 
@@ -39,7 +39,7 @@ export default function ProjectPage({ params }) {
                 rel="noreferrer"
                 className={
                   idx === 0
-                    ? "rounded-md bg-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-sage-800"
+                    ? "rounded-md bg-ink px-5 py-2.5 text-sm font-semibold text-paper hover:bg-hover"
                     : "rounded-md border border-stone-300 px-5 py-2.5 text-sm font-semibold text-ink hover:border-ink"
                 }
               >
@@ -123,7 +123,7 @@ export default function ProjectPage({ params }) {
               <dt className="text-xs font-semibold uppercase tracking-widest text-stone-500">Stack</dt>
               <dd className="mt-2 flex flex-wrap gap-2">
                 {p.stack.map((s) => (
-                  <span key={s} className="rounded-full bg-sage-50 px-2.5 py-1 text-xs font-medium text-sage-700">{s}</span>
+                  <span key={s} className="rounded-full bg-sage-50 px-2.5 py-1 text-xs font-medium text-accent">{s}</span>
                 ))}
               </dd>
             </div>
@@ -140,7 +140,7 @@ export default function ProjectPage({ params }) {
       )}
 
       <div className="mt-14 border-t border-stone-200 pt-6">
-        <Link href={`/projects/${next.slug}`} className="text-sm font-semibold text-ink hover:text-sage-700">
+        <Link href={`/projects/${next.slug}`} className="text-sm font-semibold text-ink hover:text-accent">
           Next project: {next.name}
         </Link>
       </div>

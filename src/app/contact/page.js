@@ -43,7 +43,7 @@ export default function ContactPage() {
     <section className="container-page py-14 md:py-20">
       <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div>
-          <p className="text-sm font-semibold text-sage-700">Contact</p>
+          <p className="text-sm font-semibold text-accent">Contact</p>
           <h1 className="mt-2 font-display text-4xl font-extrabold leading-tight text-ink md:text-5xl">
             Let&apos;s build something together
           </h1>
@@ -59,21 +59,21 @@ export default function ContactPage() {
                   {...(c.external ? { target: "_blank", rel: "noreferrer" } : {})}
                   className="group flex items-center gap-4 rounded-lg border border-stone-200 bg-paper p-4 transition-colors hover:border-sage-400"
                 >
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-sage-50 text-sage-700 transition-colors group-hover:bg-sage-100">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-sage-50 text-accent transition-colors group-hover:bg-sage-100">
                     <Icon>{c.icon}</Icon>
                   </span>
                   <span className="min-w-0">
                     <span className="block text-sm text-stone-500">{c.label}</span>
                     <span className="block truncate text-sm font-semibold text-ink">{c.value}</span>
                   </span>
-                  <span aria-hidden="true" className="ml-auto text-stone-400 transition-transform group-hover:translate-x-0.5 group-hover:text-sage-700">
+                  <span aria-hidden="true" className="ml-auto text-stone-400 transition-transform group-hover:translate-x-0.5 group-hover:text-accent">
                     {c.external ? "↗" : "→"}
                   </span>
                 </a>
               </li>
             ))}
             <li className="flex items-center gap-4 p-4 text-sm text-stone-600">
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-sage-50 text-sage-700">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-sage-50 text-accent">
                 <Icon><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z" /><circle cx="12" cy="9.5" r="2.5" /></Icon>
               </span>
               Based in Lagos, Nigeria. Working with clients anywhere.

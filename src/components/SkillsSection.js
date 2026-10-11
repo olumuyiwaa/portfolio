@@ -31,6 +31,9 @@ const ICONS = {
   firebase: siFirebase,
 };
 
+// Near-black brand marks follow the text colour so they stay visible in dark mode.
+const DARK_MARKS = new Set(["nextjs", "express", "prisma"]);
+
 // "My Tools": a tile per tool with its name and a short descriptor.
 export default function SkillsSection() {
   return (
@@ -42,7 +45,7 @@ export default function SkillsSection() {
           </h2>
           <p className="mt-3 text-stone-600">The tools I use to design, build and ship products.</p>
         </div>
-        <Link href="/contact" className="text-sm font-semibold text-sage-700 hover:underline">
+        <Link href="/contact" className="text-sm font-semibold text-accent hover:underline">
           Need one of these? Get in touch
         </Link>
       </div>
@@ -57,7 +60,11 @@ export default function SkillsSection() {
               aria-hidden="true"
               className="grid h-12 w-12 shrink-0 place-items-center rounded-md border border-stone-200 bg-paper"
             >
-              <svg viewBox="0 0 24 24" className="h-6 w-6" fill={`#${ICONS[t.icon].hex}`}>
+              <svg
+                viewBox="0 0 24 24"
+                className={`h-6 w-6 ${DARK_MARKS.has(t.icon) ? "text-ink" : ""}`}
+                fill={DARK_MARKS.has(t.icon) ? "currentColor" : `#${ICONS[t.icon].hex}`}
+              >
                 <path d={ICONS[t.icon].path} />
               </svg>
             </span>
