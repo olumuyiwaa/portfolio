@@ -2,7 +2,7 @@ export const SITE_NAME = "Emmanuel";
 export const ROLE = "Software engineer";
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://emmanueloladoyin.netlify.app";
 
 export const DEFAULT_DESCRIPTION =
   "Software engineer and technical contractor in Lagos, Nigeria. I build Flutter apps for iOS and Android, plus the web dashboards and backends behind them.";
