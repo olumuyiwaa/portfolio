@@ -43,7 +43,7 @@ export default function ProjectPage({ params }) {
                     : "rounded-md border border-stone-300 px-5 py-2.5 text-sm font-semibold text-ink hover:border-ink"
                 }
               >
-                {l.label} ↗
+                {l.label} →
               </a>
             ))}
           </div>

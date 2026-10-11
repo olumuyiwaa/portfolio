@@ -133,7 +133,7 @@ export default function AboutPage() {
               Start a conversation
             </Link>
             <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="rounded-md px-3 py-3 text-sm font-semibold text-white/70 hover:text-white">
-              GitHub ↗
+              GitHub →
             </a>
           </div>
         </div>

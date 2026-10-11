@@ -67,7 +67,7 @@ export default function ContactPage() {
                     <span className="block truncate text-sm font-semibold text-ink">{c.value}</span>
                   </span>
                   <span aria-hidden="true" className="ml-auto text-stone-400 transition-transform group-hover:translate-x-0.5 group-hover:text-accent">
-                    {c.external ? "↗" : "→"}
+                    →
                   </span>
                 </a>
               </li>
