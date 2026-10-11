@@ -67,7 +67,7 @@ export default function AboutPage() {
           {[
             ["Based in", "Lagos, Nigeria"],
             ["Core stack", "Flutter first, plus Next.js and Node.js"],
-            ["Projects", `${projects.length} across mobile, web and backend`],
+            ["Builds", "Mobile apps, web dashboards and backends"],
             ["Works as", "Contractor, on projects or inside your team"],
           ].map(([k, v]) => (
             <div key={k} className="bg-paper p-5">
