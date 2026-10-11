@@ -509,6 +509,7 @@ export const clients = [
   { name: "ReCreaX", logo: "/images/clients/creax.png" },
   { name: "One Universe", logo: "/images/clients/one-universe.svg" },
   { name: "Fatherland Technology", logo: "/images/clients/fatherland-technology.png", tall: true },
+  { name: "Founder Thrive", logo: "/images/clients/founderthrive.png", tall: true },
   { name: "Jumia", logo: "/images/clients/jumia.png" },
 ];
 
