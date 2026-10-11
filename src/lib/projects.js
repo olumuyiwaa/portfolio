@@ -469,16 +469,25 @@ export const services = [
 // Ways of working together. Add pricing here later if you want it shown.
 export const engagements = [
   {
+    id: "project",
+    cta: "Discuss a project",
+    icon: "scope",
     title: "Fixed-scope project",
     description: "We agree the scope, timeline and deliverables up front, then I build the product end to end.",
     fit: "New products and MVPs",
   },
   {
+    id: "retainer",
+    cta: "Ask about a retainer",
+    icon: "repeat",
     title: "Monthly retainer",
     description: "A set amount of development time each month for features, fixes and upkeep.",
     fit: "Live products that keep evolving",
   },
   {
+    id: "contractor",
+    cta: "Talk about a contract role",
+    icon: "team",
     title: "Embedded contractor",
     description: "I work inside your team, on your tickets and your repo, for as long as you need.",
     fit: "Teams that need extra hands",

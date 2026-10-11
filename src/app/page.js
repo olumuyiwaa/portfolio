@@ -7,6 +7,12 @@ import SkillsSection from "@/components/SkillsSection";
 import { projects, services, engagements, testimonials } from "@/lib/projects";
 import { SITE_NAME, GITHUB_URL, IMAGES } from "@/lib/siteConfig";
 
+const ENGAGEMENT_ICONS = {
+  scope: <><path d="M6 3h9l4 4v14H6z" /><path d="M14 3v5h5M9.5 13h6M9.5 17h4" /></>,
+  repeat: <><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5M20 4v4.5h-4.5M20 12a8 8 0 0 1-13.7 5.6L4 15.5M4 20v-4.5h4.5" /></>,
+  team: <><circle cx="9" cy="8" r="3.2" /><path d="M3 20c.4-3.4 2.8-5.3 6-5.3s5.6 1.9 6 5.3M16 5.2a3.2 3.2 0 0 1 0 5.6M18 14.9c1.7.7 2.8 2.3 3 5.1" /></>,
+};
+
 export default function Home() {
   const featured = projects.filter((p) => p.featured).slice(0, 3);
 
@@ -85,15 +91,27 @@ export default function Home() {
 
       <section className="container-page border-t border-stone-200 py-20 md:py-28">
         <h2 className="max-w-xl font-display text-3xl font-bold text-ink md:text-4xl">Ways to work together</h2>
-        <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+        <p className="mt-3 max-w-xl text-stone-600">Pick the setup that fits how your team works.</p>
+        <ul className="mt-12 grid gap-5 md:grid-cols-3 md:gap-6">
           {engagements.map((e) => (
-            <div key={e.title} className="border-t-2 border-ink pt-6">
-              <h3 className="font-display text-xl font-semibold text-ink">{e.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-stone-600">{e.description}</p>
-              <p className="mt-4 text-sm text-accent">Good for: {e.fit}</p>
-            </div>
+            <li key={e.title} className="flex flex-col rounded-xl border border-stone-200 bg-paper p-6">
+              <span className="grid h-11 w-11 place-items-center rounded-md bg-sage-50 text-accent">
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  {ENGAGEMENT_ICONS[e.icon]}
+                </svg>
+              </span>
+              <h3 className="mt-5 font-display text-xl font-semibold text-ink">{e.title}</h3>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-stone-600">{e.description}</p>
+              <div className="mt-6 border-t border-stone-200 pt-4">
+                <p className="text-xs font-semibold uppercase tracking-widest text-stone-500">Best for</p>
+                <p className="mt-1 text-sm font-medium text-ink">{e.fit}</p>
+              </div>
+              <Link href={`/contact?engagement=${e.id}`} className="mt-5 text-sm font-semibold text-accent hover:underline">
+                {e.cta} →
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <div className="border-t border-stone-200">

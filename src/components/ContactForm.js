@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CONTACT_EMAIL } from "@/lib/siteConfig";
 
 const PROJECT_TYPES = ["Mobile app", "Web app or dashboard", "Backend or API", "Full product", "Not sure yet"];
@@ -13,6 +13,16 @@ export default function ContactForm() {
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
+  // Links from the home page ("Ways to work together") arrive with ?engagement=...
+  useEffect(() => {
+    const e = new URLSearchParams(window.location.search).get("engagement");
+    const text = {
+      project: "I'd like to discuss a fixed-scope project: ",
+      retainer: "I'm interested in a monthly retainer: ",
+      contractor: "I'm looking for an embedded contractor: ",
+    }[e];
+    if (text) setForm((f) => (f.message ? f : { ...f, message: text }));
+  }, []);
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
   const openMailApp = () => {
