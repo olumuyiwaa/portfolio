@@ -506,6 +506,7 @@ export const clients = [
   { name: "ReCreaX", logo: "/images/clients/creax.png" },
   { name: "One Universe", logo: "/images/clients/one-universe.svg" },
   { name: "Fatherland Technology", logo: "/images/clients/fatherland-technology.png", tall: true },
+  { name: "Jumia", logo: "/images/clients/jumia.png" },
 ];
 
 // Add client quotes here and the section appears on the home page.
