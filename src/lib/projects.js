@@ -499,7 +499,12 @@ export const engagements = [
 // Shape: { name: "Acme", logo: "/images/clients/acme.svg", href: "https://acme.com" }
 // `logo` and `href` are optional: without a logo the name is shown as text.
 // Use a transparent PNG/SVG so the logo can be tinted for light and dark mode.
-export const clients = [];
+export const clients = [
+  { name: "E&T Management Partners", logo: "/images/clients/et-management-partners.png" },
+  { name: "eTranzact", logo: "/images/clients/etranzact.png" },
+  { name: "ReCreaX", logo: "/images/clients/creax.png" },
+  { name: "One Universe", logo: "/images/clients/one-universe.svg" },
+];
 
 // Add client quotes here and the section appears on the home page.
 // Shape: { quote: "", name: "", role: "", avatar: "" }

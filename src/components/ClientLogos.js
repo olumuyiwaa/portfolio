@@ -18,7 +18,7 @@ export default function ClientLogos() {
                 src={c.logo}
                 alt={c.name}
                 loading="lazy"
-                className="h-7 w-auto max-w-[140px] object-contain opacity-60 grayscale transition-opacity hover:opacity-100 dark:opacity-70 dark:brightness-0 dark:invert md:h-8"
+                className="h-7 w-auto max-w-[140px] object-contain opacity-75 grayscale transition-opacity hover:opacity-100 dark:opacity-70 dark:brightness-0 dark:invert md:h-8"
               />
             ) : (
               <span className="font-display text-lg font-bold text-stone-500 transition-colors hover:text-ink">{c.name}</span>
