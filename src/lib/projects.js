@@ -494,6 +494,13 @@ export const engagements = [
   },
 ];
 
+// Organisations you have worked with. They appear in a strip under the home hero;
+// leave the list empty and the strip is hidden.
+// Shape: { name: "Acme", logo: "/images/clients/acme.svg", href: "https://acme.com" }
+// `logo` and `href` are optional: without a logo the name is shown as text.
+// Use a transparent PNG/SVG so the logo can be tinted for light and dark mode.
+export const clients = [];
+
 // Add client quotes here and the section appears on the home page.
 // Shape: { quote: "", name: "", role: "", avatar: "" }
 export const testimonials = [];

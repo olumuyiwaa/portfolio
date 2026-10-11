@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ImageSlot from "@/components/ImageSlot";
 import PhoneMockup from "@/components/PhoneMockup";
+import ClientLogos from "@/components/ClientLogos";
 import ProjectCard from "@/components/ProjectCard";
 import ServiceMedia from "@/components/ServiceMedia";
 import SkillsSection from "@/components/SkillsSection";
@@ -55,6 +56,8 @@ export default function Home() {
           <PhoneMockup />
         )}
       </section>
+
+      <ClientLogos />
 
       <section id="services" className="container-page scroll-mt-20 border-t border-stone-200 py-20 md:py-28">
         <div>
