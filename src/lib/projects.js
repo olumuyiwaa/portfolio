@@ -21,6 +21,10 @@ export const projects = [
       "/images/projects/one-universe-2.png",
       "/images/projects/one-universe-3.png",
       "/images/projects/one-universe-4.png",
+      "/images/projects/one-universe-5.png",
+      "/images/projects/one-universe-6.png",
+      "/images/projects/one-universe-7.png",
+      "/images/projects/one-universe-8.png",
     ],
     galleryKind: "phone",
     summary:
