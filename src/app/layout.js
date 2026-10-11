@@ -45,6 +45,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="stylesheet" href={FONTS_URL} />
+        <meta name="google-site-verification" content="-UtgsAREFGJ7XRYl-OrbOpmzjv3uRHj2l0n-2J5rSTA" />
       </head>
       <body className="font-body">
         <script
