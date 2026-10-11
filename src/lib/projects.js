@@ -119,7 +119,7 @@ export const projects = [
       { value: "30+", label: "API endpoints used" },
     ],
     stack: ["Flutter", "Dart", "Provider", "Firebase Messaging", "fl_chart"],
-    links: [],
+    links: [{ label: "Get it on Google Play", href: "https://play.google.com/store/apps/details?id=com.theweave.founderthrive" }],
     featured: false,
   },
   {
