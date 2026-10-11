@@ -498,12 +498,14 @@ export const engagements = [
 // leave the list empty and the strip is hidden.
 // Shape: { name: "Acme", logo: "/images/clients/acme.svg", href: "https://acme.com" }
 // `logo` and `href` are optional: without a logo the name is shown as text.
+// `tall: true` makes a stacked logo a little larger.
 // Use a transparent PNG/SVG so the logo can be tinted for light and dark mode.
 export const clients = [
   { name: "E&T Management Partners", logo: "/images/clients/et-management-partners.png" },
   { name: "eTranzact", logo: "/images/clients/etranzact.png" },
   { name: "ReCreaX", logo: "/images/clients/creax.png" },
   { name: "One Universe", logo: "/images/clients/one-universe.svg" },
+  { name: "Fatherland Technology", logo: "/images/clients/fatherland-technology.png", tall: true },
 ];
 
 // Add client quotes here and the section appears on the home page.
