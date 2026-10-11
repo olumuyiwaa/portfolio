@@ -63,7 +63,10 @@ export const projects = [
       { value: "50+", label: "Screens" },
     ],
     stack: ["Flutter", "Dart", "Riverpod", "Firebase Messaging", "Google Maps"],
-    links: [{ label: "View on the App Store", href: "https://apps.apple.com/app/id6753012310" }],
+    links: [
+      { label: "View on the App Store", href: "https://apps.apple.com/app/id6753012310" },
+      { label: "Get it on Google Play", href: "https://play.google.com/store/apps/details?id=com.oneuniverse.oneuniverse" },
+    ],
     featured: true,
   },
   {
