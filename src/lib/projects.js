@@ -396,7 +396,17 @@ export const projects = [
     kind: "Restaurant website and ordering",
     category: "Full-stack",
     image: "/images/projects/afro-flavours.jpg",
-    gallery: blank(2),
+    gallery: [
+      "/images/projects/afro-flavours-1.jpg",
+      "/images/projects/afro-flavours-2.jpg",
+      "/images/projects/afro-flavours-3.jpg",
+      "/images/projects/afro-flavours-4.jpg",
+      "/images/projects/afro-flavours-5.jpg",
+      "/images/projects/afro-flavours-6.jpg",
+      "/images/projects/afro-flavours-7.jpg",
+      "/images/projects/afro-flavours-8.jpg",
+    ],
+    galleryRatio: "aspect-[1600/926]",
     summary:
       "A website and API for a West African restaurant and grocery in Auckland: table bookings, online ordering, catering requests, events and an admin dashboard.",
     overview: [
