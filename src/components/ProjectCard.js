@@ -17,9 +17,9 @@ export default function ProjectCard({ project }) {
             <li key={s} className="rounded-full bg-sage-50 px-2.5 py-1 text-xs font-medium text-accent">{s}</li>
           ))}
         </ul>
-        <span className="mt-5 text-sm font-semibold text-ink underline decoration-stone-300 underline-offset-4 group-hover:decoration-sage-500">
-          View case study
-        </span>
+        {/*<span className="mt-5 text-sm font-semibold text-ink underline decoration-stone-300 underline-offset-4 group-hover:decoration-sage-500">*/}
+        {/*  View case study*/}
+        {/*</span>*/}
       </div>
     </Link>
   );
