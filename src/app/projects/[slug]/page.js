@@ -153,9 +153,9 @@ export default function ProjectPage({ params }) {
       {p.gallery?.some(Boolean) && p.galleryKind !== "phone" && (
         <section className="mt-14">
           <h2 className="font-display text-2xl font-bold text-ink">Screenshots</h2>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
             {p.gallery.filter(Boolean).map((src, idx) => (
-              <ImageSlot key={idx} src={src} alt={`${p.name} screenshot ${idx + 1}`} ratio="aspect-[16/10]" className="rounded-lg border border-stone-200" sizes="(min-width: 640px) 50vw, 100vw" />
+              <ImageSlot key={idx} src={src} alt={`${p.name} screenshot ${idx + 1}`} ratio="aspect-[16/10]" className="rounded-lg border border-stone-200" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" />
             ))}
           </div>
         </section>
