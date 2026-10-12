@@ -279,7 +279,15 @@ export const projects = [
     kind: "Immigration client portal",
     category: "Full-stack",
     image: "/images/projects/migrantifly.jpg",
-    gallery: blank(2),
+    gallery: [
+      "/images/projects/migrantifly-1.jpg",
+      "/images/projects/migrantifly-2.jpg",
+      "/images/projects/migrantifly-3.jpg",
+      "/images/projects/migrantifly-4.jpg",
+      "/images/projects/migrantifly-5.jpg",
+      "/images/projects/migrantifly-6.jpg",
+    ],
+    galleryRatio: "aspect-[1600/926]",
     summary:
       "A client portal and marketing site for a New Zealand immigration advisory firm, covering consultations, visa applications, documents, payments and messaging.",
     overview: [
