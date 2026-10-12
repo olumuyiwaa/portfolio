@@ -213,7 +213,14 @@ export const projects = [
     kind: "SaaS for cleaning businesses",
     category: "Full-stack",
     image: "/images/projects/cleansera.jpg",
-    gallery: blank(2),
+    gallery: [
+      "/images/projects/cleansera-1.jpg",
+      "/images/projects/cleansera-2.jpg",
+      "/images/projects/cleansera-3.jpg",
+      "/images/projects/cleansera-4.jpg",
+      "/images/projects/cleansera-5.jpg",
+      "/images/projects/cleansera-6.jpg",
+    ],
     summary:
       "A multi-tenant SaaS for cleaning companies: branded booking, smart dispatch, recurring schedules, payroll and a cleaner app, sold as a flat subscription with no commission.",
     overview: [
