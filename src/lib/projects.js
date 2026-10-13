@@ -299,6 +299,7 @@ export const projects = [
     category: "Full-stack",
     image: "/images/projects/migrantifly.jpg",
     gallery: [
+      "/images/projects/migrantifly-7.jpg",
       "/images/projects/migrantifly-1.jpg",
       "/images/projects/migrantifly-2.jpg",
       "/images/projects/migrantifly-3.jpg",
