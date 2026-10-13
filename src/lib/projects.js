@@ -230,6 +230,9 @@ export const projects = [
     category: "Full-stack",
     image: "/images/projects/cleansera.jpg",
     gallery: [
+      "/images/projects/cleansera-7.jpg",
+      "/images/projects/cleansera-8.jpg",
+      "/images/projects/cleansera-9.jpg",
       "/images/projects/cleansera-1.jpg",
       "/images/projects/cleansera-2.jpg",
       "/images/projects/cleansera-3.jpg",
