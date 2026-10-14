@@ -102,13 +102,13 @@ main {
 }
 
 .container-page {
-  width: min(100% - 32px, 1200px);
+  width: min(100% - 32px, 1280px);
   margin-inline: auto;
 }
 
 @media (min-width: 768px) {
   .container-page {
-    width: min(100% - 56px, 1200px);
+    width: min(100% - 56px, 1280px);
   }
 }
 

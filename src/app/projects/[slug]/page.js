@@ -50,7 +50,7 @@ export default function ProjectPage({ params }) {
         )}
       </div>
 
-      <ProjectCover project={p} ratio="aspect-[16/9]" className="mt-10 rounded-xl" sizes="(min-width: 1200px) 1200px, 100vw" priority />
+      <ProjectCover project={p} ratio="aspect-[16/9]" className="mt-10 rounded-xl" sizes="(min-width: 1280px) 1280px, 100vw" priority />
 
       {p.stats?.length > 0 && (
         <dl className="mt-8 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-stone-200 bg-stone-200 sm:grid-cols-3 lg:grid-cols-4">
