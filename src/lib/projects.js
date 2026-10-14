@@ -299,15 +299,21 @@ export const projects = [
     category: "Full-stack",
     image: "/images/projects/migrantifly.jpg",
     gallery: [
-      "/images/projects/migrantifly-7.jpg",
       "/images/projects/migrantifly-1.jpg",
       "/images/projects/migrantifly-2.jpg",
       "/images/projects/migrantifly-3.jpg",
       "/images/projects/migrantifly-4.jpg",
       "/images/projects/migrantifly-5.jpg",
       "/images/projects/migrantifly-6.jpg",
+      "/images/projects/migrantifly-7.jpg",
+      "/images/projects/migrantifly-8.jpg",
+      "/images/projects/migrantifly-9.jpg",
+      "/images/projects/migrantifly-10.jpg",
+      "/images/projects/migrantifly-11.jpg",
+      "/images/projects/migrantifly-12.jpg",
+      "/images/projects/migrantifly-13.jpg",
+      "/images/projects/migrantifly-14.jpg",
     ],
-    galleryRatio: "aspect-[1600/926]",
     summary:
       "A client portal and marketing site for a New Zealand immigration advisory firm, covering consultations, visa applications, documents, payments and messaging.",
     overview: [
