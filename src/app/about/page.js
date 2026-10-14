@@ -1,6 +1,6 @@
 import Link from "next/link";
 import SkillsSection from "@/components/SkillsSection";
-import { projects } from "@/lib/projects";
+import { projects, experience } from "@/lib/projects";
 import { SITE_NAME, ROLE, IMAGES, GITHUB_URL, PORTRAIT_URL } from "@/lib/siteConfig";
 import Portrait from "@/components/Portrait";
 
@@ -92,6 +92,38 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-stone-200 py-20 md:py-28" aria-labelledby="experience-heading">
+        <div className="container-page">
+          <h2 id="experience-heading" className="max-w-xl font-display text-3xl font-bold text-ink md:text-4xl">Experience</h2>
+          <ol className="mt-10 divide-y divide-stone-200 border-y border-stone-200">
+            {experience.map((job) => (
+              <li key={`${job.company}-${job.period}`} className="grid gap-4 py-8 md:grid-cols-[14rem_1fr] md:gap-10">
+                <p className="text-sm font-semibold text-stone-500">{job.period}</p>
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-ink">{job.role}</h3>
+                  <p className="mt-1 text-sm font-medium text-accent">
+                    {job.company}{job.mode ? ` · ${job.mode}` : ""}
+                  </p>
+                  <ul className="mt-4 space-y-2.5">
+                    {job.points.map((pt) => (
+                      <li key={pt} className="flex gap-3 text-sm leading-relaxed text-stone-600">
+                        <span aria-hidden="true" className="mt-2 h-1 w-1 shrink-0 rounded-full bg-stone-400" />
+                        <span>{pt}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {job.achievement && (
+                    <p className="mt-5 rounded-md bg-sage-50 px-4 py-3 text-sm leading-relaxed text-ink">
+                      <span className="font-semibold">Key achievement: </span>{job.achievement}
+                    </p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 

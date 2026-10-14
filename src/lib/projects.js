@@ -581,3 +581,64 @@ export const clients = [
 // Add client quotes here and the section appears on the home page.
 // Shape: { quote: "", name: "", role: "", avatar: "" }
 export const testimonials = [];
+
+// Work history, newest first. Shown on the About page.
+export const experience = [
+  {
+    role: "Mobile Developer, Flutter",
+    company: "eTranzact PLC",
+    mode: "Hybrid",
+    period: "June 2025 – Present",
+    points: [
+      "Development of cross-platform mobile app using Flutter and Dart, delivering a seamless experience across Android and iOS.",
+      "Integrated REST APIs and third-party services, enabling real-time content updates and interactive features.",
+      "Optimized app performance by profiling rendering and memory usage, reducing jank and improving frame rate consistency.",
+      "Implemented secure local storage and session management, improving data privacy and user trust.",
+      "Wrote unit and widget tests to ensure code reliability, achieving over 85% test coverage.",
+    ],
+  },
+  {
+    role: "Mobile Developer, Flutter",
+    company: "Recreax",
+    mode: "Remote",
+    period: "March 2025 – December 2025",
+    points: [
+      "Developed and maintained cross-platform mobile applications using Flutter, delivering high-performance solutions for Android and iOS platforms.",
+      "Integrated RESTful APIs, Firebase services, and third-party libraries to implement scalable features and enhance application functionality.",
+      "Improved application performance, responsiveness, and reliability through code optimization, efficient state management, and adherence to best practices.",
+      "Conducted rigorous testing, debugging, and issue resolution, reducing defects and ensuring a seamless user experience across a wide range of devices and screen sizes.",
+      "Collaborated with designers, product stakeholders, and backend developers to translate business requirements into user-centric mobile solutions.",
+      "Participated in code reviews and maintained a clean, reusable, and well-documented code base.",
+    ],
+    achievement: "Lead the development of the One Universe and Founder Thrive mobile applications.",
+  },
+  {
+    role: "Mobile Developer, Flutter",
+    company: "Fatherland Technology",
+    mode: "Hybrid",
+    period: "January 2024 – June 2025",
+    points: [
+      "Built the Fatherland Mobile and NCDF Investment mobile app using Flutter and Dart, with a focus on clear navigation and smooth animations.",
+      "Tested the app across different devices, ensuring it stayed 99.8% crash-free on Android and iOS.",
+      "Crafted clean interfaces for financial data, improving decision-making by 20% through live updates.",
+      "Integrated third-party services and optimized the app's performance, reducing load times by 25%.",
+      "Enabled secure real-time transaction updates using Firebase, ensuring 99.9% transaction accuracy.",
+      "Implemented state management techniques using Provider and Bloc logic to maintain efficient and organized application logic.",
+    ],
+    achievement: "Spearheaded the development of the Fatherland app, from development to deployment, driving increased user satisfaction through superior UX.",
+  },
+  {
+    role: "User Experience Designer",
+    company: "Jumia Nigeria",
+    mode: null,
+    period: "July 2021 – December 2023",
+    points: [
+      "Created wireframes, visual designs, and prototypes, increasing user engagement by 40% and reducing bounce rates by 25%.",
+      "Ran A/B tests on various UI elements, improving conversion rates by 20%.",
+      "Collaborated with designers to enhance digital experiences, boosting customer retention by 30% and session duration by 20%.",
+      "Used Sketch and InVision for wireframes and mockups, speeding up the design process by 36%.",
+      "Conducted over 50 interviews, 200 surveys, and 10 usability tests, which led to a 25% increase in user satisfaction and 15% higher retention rates.",
+      "Provided advice on UX research methods, resulting in a 15% improvement in user satisfaction.",
+    ],
+  },
+];
