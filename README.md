@@ -25,3 +25,24 @@ npm run lint
 ```
 Deploys as-is to Vercel, Render or Netlify.
 # portfolio
+
+## Private site activity dashboard
+
+`/insights` shows visitors, page views, top pages, referrers, countries, devices,
+outbound clicks and live activity. It is not linked anywhere, is excluded from the
+sitemap, sends `noindex` headers and sits behind a password.
+
+Setup (Netlify: Site configuration, Environment variables, then redeploy):
+
+- `MONGODB_URI`: your MongoDB connection string. On Atlas, allow network access from
+  anywhere (0.0.0.0/0), since Netlify functions have no fixed IP.
+- `ANALYTICS_PASSWORD`: the password for the page.
+- `ANALYTICS_SECRET` (optional): a long random string.
+- `MONGODB_DB` (optional): defaults to `portfolio`.
+
+How it works: a small client component posts page views and outbound clicks to
+`/api/track`, which stores them in the `events` collection. No cookies and no IP
+addresses are stored; a visitor is an anonymous daily hash, and events expire after
+400 days. Country comes from Netlify's geo header. Open `/insights` once in each
+browser you use to exclude your own visits (a toggle at the bottom reverses it).
+Tracking only runs in production builds.

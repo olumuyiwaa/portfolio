@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Tracker from "@/components/Tracker";
 import { SITE_NAME, SITE_URL, ROLE, DEFAULT_DESCRIPTION, GITHUB_URL, LINKEDIN_URL } from "@/lib/siteConfig";
 
 const FONTS_URL =
@@ -100,6 +101,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main id="main" tabIndex={-1} className="outline-none">{children}</main>
         <Footer />
+        <Tracker />
       </body>
     </html>
   );
