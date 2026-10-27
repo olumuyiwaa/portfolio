@@ -24,6 +24,8 @@ export const metadata = {
   },
   description: DEFAULT_DESCRIPTION,
   keywords: [
+    "Emmanuel",
+    "Oladoyin",
     "Emmanuel Oladoyin",
     "Oladoyin Emmanuel",
     "Software Engineer",
@@ -90,6 +92,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="stylesheet" href={FONTS_URL} />
+        <meta name="google-site-verification" content="wKqFUFi_0QDwW_w6uBVx9E8EukeUVEAuMq1rfjMHj_w" />
         <meta name="google-site-verification" content="-UtgsAREFGJ7XRYl-OrbOpmzjv3uRHj2l0n-2J5rSTA" />
       </head>
       <body className="font-body">
