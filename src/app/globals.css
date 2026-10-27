@@ -153,6 +153,51 @@ main {
   animation: rowIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+@keyframes screenIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes notifIn {
+  from {
+    opacity: 0;
+    transform: translateY(-140%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tapRipple {
+  from {
+    opacity: 0.55;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2.4);
+  }
+}
+
+.screen-in {
+  animation: screenIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.notif-in {
+  animation: notifIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.tap-ripple {
+  animation: tapRipple 0.55s ease-out both;
+}
+
 .animate-fade-up {
   animation: fadeUp 0.8s ease-out both;
 }
