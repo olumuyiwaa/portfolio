@@ -73,7 +73,7 @@ function Setup({ missing }) {
     <Shell>
       <div className="mx-auto max-w-xl rounded-xl border border-stone-200 bg-paper p-6">
         <h1 className="font-display text-2xl font-bold text-ink">Insights is not set up yet</h1>
-        <p className="mt-2 text-sm text-stone-600">Add these environment variables (Netlify: Site configuration, Environment variables), then redeploy:</p>
+        <p className="mt-2 text-sm text-stone-600">Add these environment variables in your host (Vercel: Project Settings, Environment Variables), then redeploy:</p>
         <ul className="mt-4 space-y-2 text-sm">
           {missing.map((m) => (
             <li key={m.name}>
@@ -221,7 +221,7 @@ function Dashboard({ stats }) {
           <BarList rows={referrerRows} />
         </Card>
         <Card title="Countries" note="Unique visitors">
-          <BarList rows={stats.countries.map((r) => ({ label: countryLabel(r.label), value: r.count }))} empty="No country data yet. It appears once the site is live on Netlify." />
+          <BarList rows={stats.countries.map((r) => ({ label: countryLabel(r.label), value: r.count }))} empty="No country data yet. It appears once the site is live." />
         </Card>
         <Card title="Devices" note="Unique visitors">
           <BarList rows={stats.devices.map((r) => ({ label: r.label, value: r.count }))} />
@@ -287,7 +287,7 @@ export default async function InsightsPage({ searchParams }) {
       <Shell>
         <div className="mx-auto max-w-xl rounded-xl border border-stone-200 bg-paper p-6">
           <h1 className="font-display text-2xl font-bold text-ink">Can&apos;t reach the database</h1>
-          <p className="mt-2 text-sm text-stone-600">Check MONGODB_URI, and that your MongoDB network access allows connections from Netlify (Atlas: Network Access, allow 0.0.0.0/0).</p>
+          <p className="mt-2 text-sm text-stone-600">Check MONGODB_URI, and that your MongoDB network access allows connections from your host (Atlas: Network Access, allow 0.0.0.0/0).</p>
         </div>
       </Shell>
     );

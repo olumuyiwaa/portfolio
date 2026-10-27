@@ -1,0 +1,15 @@
+# The site now lives on Vercel. This permanently (301) redirects every URL on
+# the old Netlify domain to the same path on the new one. It runs at Netlify's
+# edge, before any page is served, so it also covers the statically served
+# homepage, which the redirects() rule in next.config.js can miss.
+[[redirects]]
+  from = "https://emmanueloladoyin.netlify.app/*"
+  to = "https://emmanueloladoyin.vercel.app/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://emmanueloladoyin.netlify.app/*"
+  to = "https://emmanueloladoyin.vercel.app/:splat"
+  status = 301
+  force = true

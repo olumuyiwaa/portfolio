@@ -2,7 +2,7 @@ export const SITE_NAME = "Emmanuel Oladoyin";
 export const ROLE = "Software engineer";
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://emmanueloladoyin.netlify.app";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://emmanueloladoyin.vercel.app";
 
 export const DEFAULT_DESCRIPTION =
   "Emmanuel Oladoyin is a software engineer and technical contractor in Lagos, Nigeria. He builds Flutter apps for iOS and Android, plus the web dashboards and backends behind them.";
