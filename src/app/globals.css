@@ -186,6 +186,20 @@ main {
   }
 }
 
+@keyframes barGrow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.bar-grow {
+  transform-origin: bottom;
+  animation: barGrow 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 .screen-in {
   animation: screenIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
 }

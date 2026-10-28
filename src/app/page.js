@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ImageSlot from "@/components/ImageSlot";
-import PhoneMockup from "@/components/PhoneMockup";
+import HeroDevices from "@/components/HeroDevices";
 import ClientLogos from "@/components/ClientLogos";
 import ProjectCard from "@/components/ProjectCard";
 import ServiceMedia from "@/components/ServiceMedia";
@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="container-page grid items-center gap-14 py-16 md:grid-cols-[1.2fr_0.8fr] md:gap-10 md:py-28">
+      <section className="container-page grid items-center gap-14 py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-10 md:py-28">
         <div>
           <h1 className="animate-fade-up max-w-3xl font-display text-[2.75rem] font-extrabold text-ink sm:text-6xl">
             Hi, I&apos;m {SITE_NAME}. I build mobile apps, and the web and backend behind them.
@@ -53,7 +53,7 @@ export default function Home() {
             priority
           />
         ) : (
-          <PhoneMockup />
+          <HeroDevices />
         )}
       </section>
 

@@ -120,10 +120,14 @@ function MiniMap() {
   );
 }
 
-export default function PhoneMockup() {
+export default function PhoneMockup({ fixed = false, onBeat }) {
   const rootRef = useRef(null);
   const screenRef = useRef(null);
   const timers = useRef({});
+  const beatRef = useRef(onBeat);
+  useEffect(() => {
+    beatRef.current = onBeat;
+  }, [onBeat]);
 
   const [tab, setTab] = useState("home");
   const [action, setAction] = useState("send");
@@ -181,6 +185,7 @@ export default function PhoneMockup() {
       if (id.startsWith("filter-")) return setFilter(id.slice(7));
       if (id.startsWith("slot-")) return setSlot(Number(id.slice(5)));
       if (id === "notif-in") {
+        beatRef.current?.("pickup");
         setNotif(true);
         clearTimeout(timers.current.notif);
         timers.current.notif = setTimeout(() => setNotif(false), 5000);
@@ -200,6 +205,7 @@ export default function PhoneMockup() {
   );
 
   const resetScreen = useCallback(() => {
+    beatRef.current?.("reset");
     setTab("home");
     setAction("send");
     setFilter("all");
@@ -218,7 +224,8 @@ export default function PhoneMockup() {
     if (!el) return null;
     const s = screen.getBoundingClientRect();
     const r = el.getBoundingClientRect();
-    return { el, x: r.left - s.left + r.width / 2, y: r.top - s.top + r.height / 2 };
+    const k = s.width / screen.offsetWidth || 1; // the hero may scale this phone with CSS
+    return { el, x: (r.left - s.left + r.width / 2) / k, y: (r.top - s.top + r.height / 2) / k };
   }, []);
 
   const press = useCallback(
@@ -324,7 +331,7 @@ export default function PhoneMockup() {
   const list = RECENT.filter((r) => filter === "all" || (filter === "transit" ? r.tone === "live" : r.tone === "done"));
 
   return (
-    <div ref={rootRef} className="relative mx-auto w-[270px] md:w-[300px]" aria-hidden="true">
+    <div ref={rootRef} className={`relative mx-auto ${fixed ? "w-[300px]" : "w-[270px] md:w-[300px]"}`} aria-hidden="true">
       <div className="phone-in relative rounded-[44px] bg-night p-[10px] ring-1 ring-stone-300">
         {/* side buttons */}
         <span className="absolute -left-[3px] top-24 h-8 w-[3px] rounded-l bg-night" />
@@ -659,9 +666,11 @@ export default function PhoneMockup() {
         </div>
       </div>
 
-      <span className="row-in absolute -left-14 top-[58%] hidden rounded-full bg-amber-300 px-3.5 py-1.5 text-sm font-semibold text-night sm:block" style={{ animationDelay: "1.4s" }}>
-        Flutter
-      </span>
+      {!fixed && (
+        <span className="row-in absolute -left-14 top-[58%] hidden rounded-full bg-amber-300 px-3.5 py-1.5 text-sm font-semibold text-night sm:block" style={{ animationDelay: "1.4s" }}>
+          Flutter
+        </span>
+      )}
     </div>
   );
 }
