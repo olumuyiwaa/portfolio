@@ -10,9 +10,9 @@ import TabletMockup from "@/components/TabletMockup";
 const W = 850;
 const H = 620;
 const MIN_SCALE = 0.66;
-// Compact layout (small screens): tablet stacked above the phone, no overlap.
+// Compact layout (small screens): phone overlaid on the tablet.
 const CW = 520;
-const CH = 1060;
+const CH = 490;
 
 export default function HeroDevices() {
   const ref = useRef(null);
@@ -57,17 +57,17 @@ export default function HeroDevices() {
               </>
             ) : (
               <>
-                {/* Compact stack for small screens: tablet on top, phone below it. */}
+                {/* Compact stack for small screens: tablet with the phone overlaid at its lower right. */}
                 <div className="absolute left-[10px] top-0">
                   <TabletMockup beat={beat} />
                 </div>
-                <div className="absolute left-[110px] top-[410px]">
+                <div className="absolute left-[366px] top-[150px]" style={{ transform: "scale(0.5)", transformOrigin: "top left" }}>
                   <PhoneMockup fixed onBeat={onBeat} />
                 </div>
-                <span className="row-in absolute left-[10px] top-[425px] rounded-full bg-white px-3.5 py-1.5 text-sm font-semibold text-night ring-1 ring-stone-300" style={{ animationDelay: "1.2s" }}>
+                <span className="row-in absolute left-[10px] top-[395px] rounded-full bg-white px-3.5 py-1.5 text-sm font-semibold text-night ring-1 ring-stone-300" style={{ animationDelay: "1.2s" }}>
                   Next.js
                 </span>
-                <span className="row-in absolute left-[415px] top-[425px] rounded-full bg-amber-300 px-3.5 py-1.5 text-sm font-semibold text-night" style={{ animationDelay: "1.4s" }}>
+                <span className="row-in absolute left-[10px] top-[445px] rounded-full bg-amber-300 px-3.5 py-1.5 text-sm font-semibold text-night" style={{ animationDelay: "1.4s" }}>
                   Flutter
                 </span>
               </>
