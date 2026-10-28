@@ -92,6 +92,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="stylesheet" href={FONTS_URL} />
+        <meta name="google-site-verification" content="aUIsJyum-32S0NA0Vx-u6oB3ZfDtgo7Sy6yq5PnC64c" />
         <meta name="google-site-verification" content="wKqFUFi_0QDwW_w6uBVx9E8EukeUVEAuMq1rfjMHj_w" />
         <meta name="google-site-verification" content="-UtgsAREFGJ7XRYl-OrbOpmzjv3uRHj2l0n-2J5rSTA" />
       </head>
