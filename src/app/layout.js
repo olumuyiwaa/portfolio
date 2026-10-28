@@ -69,8 +69,9 @@ export const viewport = {
   ],
 };
 
-// Runs before first paint so the saved (or system) theme never flashes.
-const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}if(t==="dark")document.documentElement.classList.add("dark")}catch(e){}})();`;
+// Runs before first paint so the theme never flashes.
+// Theme priority: 1) the visitor's system setting, 2) light. A stale saved choice from the old toggle is cleared.
+const THEME_SCRIPT = `(function(){try{localStorage.removeItem("theme")}catch(e){}try{if(window.matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.classList.add("dark")}catch(e){}})();`;
 
 const structuredData = {
   "@context": "https://schema.org",
