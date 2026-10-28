@@ -16,15 +16,19 @@ const nextConfig = {
     return [
       {
         source: '/:path*',
-        // This guard ensures it ONLY fires when hitting your Netlify domain,
+        // This guard ensures it fires when hitting your Netlify or vercel domain,
         // protecting from infinite loops and letting local dev work normally.
         has: [
           {
             type: 'host',
             value: 'emmanueloladoyin.netlify.app',
           },
+          {
+            type: 'host',
+            value: 'emmanueloladoyin.vercel.app',
+          },
         ],
-        destination: 'https://emmanueloladoyin.vercel.app/:path*',
+        destination: 'https://emmanueloladoyin.com/:path*',
         permanent: true, // 301 Redirect
       },
     ];
