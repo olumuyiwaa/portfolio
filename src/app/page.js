@@ -144,7 +144,8 @@ export default function Home() {
       )}
 
       <section className="container-page pb-20 md:pb-28">
-        <div className="rounded-xl bg-panel px-6 py-14 text-center md:px-12 md:py-20">
+        <div className="dot-panel rounded-xl bg-panel px-6 py-14 text-center md:px-12 md:py-20">
+          <div aria-hidden="true" className="dot-grid-bg dot-grid-fade" />
           <h2 className="mx-auto max-w-xl font-display text-3xl font-bold text-white md:text-5xl">
             Have something to build?
           </h2>

@@ -154,7 +154,8 @@ export default function AboutPage() {
       </section>
 
       <section className="container-page pb-20 md:pb-28">
-        <div className="rounded-xl bg-panel p-8 text-white md:p-14">
+        <div className="dot-panel rounded-xl bg-panel p-8 text-white md:p-14">
+          <div aria-hidden="true" className="dot-grid-bg dot-grid-fade" />
           <h2 className="max-w-xl font-display text-2xl font-bold md:text-3xl">Let&apos;s work together</h2>
           <p className="mt-3 max-w-xl text-white/70">
             I take on fixed-scope projects, monthly retainers and embedded contractor roles.

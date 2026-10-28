@@ -226,3 +226,16 @@ main {
     scroll-behavior: auto !important;
   }
 }
+
+/* Dot grid texture for dark call-to-action panels. */
+.dot-grid-bg {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.dot-grid-fade {
+  mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+}
+.dot-panel { position: relative; overflow: hidden; }
+.dot-panel > * { position: relative; }
+.dot-panel > .dot-grid-bg { position: absolute; inset: 0; pointer-events: none; }
