@@ -22,7 +22,7 @@ export default function Home() {
       <section className="container-page grid items-center gap-14 py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-10 md:py-28">
         <div>
           <h1 className="animate-fade-up max-w-3xl font-display text-[2.75rem] font-extrabold text-ink sm:text-6xl">
-            Hi, I&apos;m {SITE_NAME}. I build mobile apps, and the web and backend behind them.
+            Hi, I&apos;m {SITE_NAME}. I build mobile apps, plus the web and backend behind them.
           </h1>
           <p className="animate-fade-up mt-7 max-w-xl text-lg leading-relaxed text-stone-600" style={{ animationDelay: "0.1s" }}>
             I&apos;m a software engineer who builds mobile apps in Flutter, with Next.js and
