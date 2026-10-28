@@ -14,18 +14,25 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Rule 1: Redirect Netlify -> emmanueloladoyin.com
       {
         source: '/:path*',
-        // This guard ensures it fires when hitting your Netlify or vercel domain,
-        // protecting from infinite loops and letting local dev work normally.
         has: [
           {
             type: 'host',
-            value: 'emmanueloladoyin.netlify.app',
+            value: '(?<subdomain>.*)emmanueloladoyin\\.netlify\\.app', // Regex handles HTTP/HTTPS & subdomains
           },
+        ],
+        destination: 'https://emmanueloladoyin.com/:path*',
+        permanent: true, // 301 Redirect
+      },
+      // Rule 2: Redirect Vercel subdomain -> emmanueloladoyin.com
+      {
+        source: '/:path*',
+        has: [
           {
             type: 'host',
-            value: 'emmanueloladoyin.vercel.app',
+            value: '(?<subdomain>.*)emmanueloladoyin\\.vercel\\.app',
           },
         ],
         destination: 'https://emmanueloladoyin.com/:path*',
