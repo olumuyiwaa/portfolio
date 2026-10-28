@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-// Sun/moon icon button. Theme follows the system (light if unavailable); a click overrides it for the current visit only.
+// Sun/moon icon button. Theme follows the system (light if unavailable); a click saves a choice that takes priority.
 // The initial class on <html> is set by the inline script
 // in layout.js, so this only reads it after mount to avoid a hydration mismatch.
 export default function ThemeToggle({ className = "" }) {
@@ -10,9 +10,13 @@ export default function ThemeToggle({ className = "" }) {
 
   useEffect(() => {
     setDark(document.documentElement.classList.contains("dark"));
-    // Follow the system setting live; the button only overrides it for this visit.
+    // Follow the system setting live, unless the visitor has chosen a theme with the button.
     let mq;
     const onChange = (e) => {
+      try {
+        const t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") return;
+      } catch (err) {}
       document.documentElement.classList.toggle("dark", e.matches);
       setDark(e.matches);
     };
@@ -30,6 +34,9 @@ export default function ThemeToggle({ className = "" }) {
   const toggle = () => {
     const next = !document.documentElement.classList.contains("dark");
     document.documentElement.classList.toggle("dark", next);
+    try {
+      localStorage.setItem("theme", next ? "dark" : "light");
+    } catch (e) {}
     setDark(next);
   };
 
