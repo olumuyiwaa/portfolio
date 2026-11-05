@@ -245,7 +245,7 @@ export const projects = [
       "A multi-tenant SaaS that gives small African businesses their own branded online store and one dashboard for products, orders, bookings, customers and reports, on a simple subscription.",
     overview: [
       "ShopCera lets a small business launch a branded storefront in minutes and run everything behind it from one dashboard. Orders from the online store, WhatsApp, Instagram, phone calls and walk-ins all land in the same place, and stock updates as sales come in.",
-      "I designed and built the whole product: the API, the marketing site, the business dashboard, the platform admin and the six storefront themes.",
+      "I designed and built the whole product: the API, the marketing site, the business dashboard and the six storefront themes.",
     ],
     role: "Designed and built the whole product.",
     platforms: ["Web"],
@@ -272,14 +272,14 @@ export const projects = [
         text: "Sales over time, best sellers, top customers, money still owed, plus visitor and conversion analytics for each store.",
       },
       {
-        title: "Platform administration",
-        text: "A super-admin area for plans, subscriptions, discount codes, invoices and approving or suspending businesses, with an audit log.",
+        title: "Delivery and payments",
+        text: "Delivery zones, store pickup, free-shipping thresholds and courier booking, with online payments through Paystack and Flutterwave or pay on delivery and bank transfer.",
       },
     ],
     engineering: [
       "Multi-tenancy on a shared database: a scoped client forces every query on a tenant table through the business id and blocks cross-tenant writes, covered by isolation tests.",
       "Order placement runs in a transaction behind a per-business lock, with guarded stock and coupon updates, so two shoppers cannot buy the last item.",
-      "Refresh-token rotation with replay detection, argon2 password hashing, and suspended businesses locked out immediately.",
+      "Refresh-token rotation with replay detection and argon2 password hashing.",
       "Subscription billing and shop payments through Paystack and Flutterwave, with signed webhooks, renewals, dunning and trial-expiry jobs.",
       "Plan limits and storefront themes enforced per subscription, with an end-to-end test suite running against a real database.",
     ],
