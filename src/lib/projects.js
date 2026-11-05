@@ -4,8 +4,8 @@
 // are never linked.
 //
 // Images: put files in public/images/projects and set the path, e.g.
-//   image: "/images/projects/cleansera.jpg"
-//   gallery: ["/images/projects/cleansera-1.jpg", ...]
+//   image: "/images/projects/shopcera.jpg"
+//   gallery: ["/images/projects/shopcera-1.jpg", ...]
 // Empty strings render a blank placeholder until you add the real files.
 const blank = (n) => Array.from({ length: n }, () => "");
 
@@ -224,72 +224,73 @@ export const projects = [
     featured: true,
   },
   {
-    slug: "cleansera",
-    name: "CleanSera",
-    kind: "SaaS for cleaning businesses",
+    slug: "shopcera",
+    name: "ShopCera",
+    kind: "Commerce SaaS for small businesses",
     category: "Full-stack",
-    image: "/images/projects/cleansera.jpg",
+    image: "/images/projects/shopcera.jpg",
     gallery: [
-      "/images/projects/cleansera-7.jpg",
-      "/images/projects/cleansera-8.jpg",
-      "/images/projects/cleansera-9.jpg",
-      "/images/projects/cleansera-1.jpg",
-      "/images/projects/cleansera-2.jpg",
-      "/images/projects/cleansera-3.jpg",
-      "/images/projects/cleansera-4.jpg",
-      "/images/projects/cleansera-5.jpg",
-      "/images/projects/cleansera-6.jpg",
+      "/images/projects/shopcera-1.jpg",
+      "/images/projects/shopcera-2.jpg",
+      "/images/projects/shopcera-3.jpg",
+      "/images/projects/shopcera-4.jpg",
+      "/images/projects/shopcera-5.jpg",
+      "/images/projects/shopcera-6.jpg",
+      "/images/projects/shopcera-7.jpg",
+      "/images/projects/shopcera-8.jpg",
+      "/images/projects/shopcera-9.jpg",
+      "/images/projects/shopcera-10.jpg",
     ],
     summary:
-      "A multi-tenant SaaS for cleaning companies: branded booking, smart dispatch, recurring schedules, payroll and a cleaner app, sold as a flat subscription with no commission.",
+      "A multi-tenant SaaS that gives small African businesses their own branded online store and one dashboard for products, orders, bookings, customers and reports, on a simple subscription.",
     overview: [
-      "CleanSera gives a cleaning business everything it needs to run on one platform: a booking site under its own brand, a dashboard for scheduling and dispatch, and a mobile app for its cleaners. Customer payments go straight to the business through Stripe Connect, and the business pays a flat subscription instead of a commission.",
-      "I designed and built the whole product: the API, the web dashboard with its storefront and customer portal, and the cleaner app.",
+      "ShopCera lets a small business launch a branded storefront in minutes and run everything behind it from one dashboard. Orders from the online store, WhatsApp, Instagram, phone calls and walk-ins all land in the same place, and stock updates as sales come in.",
+      "I designed and built the whole product: the API, the marketing site, the business dashboard, the platform admin and the six storefront themes.",
     ],
     role: "Designed and built the whole product.",
-    platforms: ["Web", "iOS", "Android"],
+    platforms: ["Web"],
     availability: "",
     features: [
       {
-        title: "Branded booking and storefront",
-        text: "An embeddable booking widget, a branded storefront on a subdomain or custom domain, and a customer portal.",
+        title: "Branded storefronts",
+        text: "Each business gets its own store with a logo, brand colour, its own address or custom domain, and a choice of six themes that can be switched without losing products or orders.",
       },
       {
-        title: "Scheduling and dispatch",
-        text: "A calendar, assignment conflict checks, and auto-assign that ranks cleaners by distance and workload.",
+        title: "Every sales channel in one place",
+        text: "Online orders plus in-person, WhatsApp, Instagram and phone sales recorded in the same dashboard, with stock, discounts and owing balances tracked.",
       },
       {
-        title: "Recurring care plans",
-        text: "Recurring schedules with frequency discounts, deposits and cancellation policies, charged automatically.",
+        title: "Products, services and bookings",
+        text: "Products with photos, sizes and colours, services with opening hours and slots, a calendar view, and calendar sync with Google, Apple and Outlook.",
       },
       {
-        title: "Running the business",
-        text: "Customers, services and add-ons, checklists, reviews, coupons and gift cards, payroll, inventory and compliance tracking.",
+        title: "Customers and marketing",
+        text: "Customer groups from rules or hand-picked lists, discount codes, abandoned-cart reminders, and email or SMS messages with personalisation.",
       },
       {
-        title: "Invoicing and payments",
-        text: "Stripe Connect payments to the business's own account, VAT-aware invoices with gapless numbering, and a UBL export.",
+        title: "Reports and analytics",
+        text: "Sales over time, best sellers, top customers, money still owed, plus visitor and conversion analytics for each store.",
       },
       {
-        title: "Cleaner mobile app",
-        text: "Jobs, availability, calendar sync, documents, messages and earnings, with on-my-way and check-in steps, offline queueing and push notifications.",
+        title: "Platform administration",
+        text: "A super-admin area for plans, subscriptions, discount codes, invoices and approving or suspending businesses, with an audit log.",
       },
     ],
     engineering: [
-      "Multi-tenancy on a shared database: every request resolves its business and membership, and cross-tenant tests guard payroll and reviews.",
-      "Custom domains verified by DNS record, with on-demand TLS certificates issued for verified domains only.",
-      "Bookings run through a state machine with locking, so two people cannot take the same slot.",
-      "Stripe Connect onboarding and webhooks; payments go to the business as merchant of record, and the platform fee defaults to zero.",
-      "Subscription plans with feature flags and a trial, background workers for deposits and recurring jobs, and a CI pipeline that runs tests and builds.",
+      "Multi-tenancy on a shared database: a scoped client forces every query on a tenant table through the business id and blocks cross-tenant writes, covered by isolation tests.",
+      "Order placement runs in a transaction behind a per-business lock, with guarded stock and coupon updates, so two shoppers cannot buy the last item.",
+      "Refresh-token rotation with replay detection, argon2 password hashing, and suspended businesses locked out immediately.",
+      "Subscription billing and shop payments through Paystack and Flutterwave, with signed webhooks, renewals, dunning and trial-expiry jobs.",
+      "Plan limits and storefront themes enforced per subscription, with an end-to-end test suite running against a real database.",
     ],
     stats: [
-      { value: "55", label: "Data models" },
-      { value: "38", label: "API modules" },
-      { value: "200+", label: "API routes" },
-      { value: "64", label: "Backend test files" },
+      { value: "42", label: "Data models" },
+      { value: "165+", label: "API routes" },
+      { value: "6", label: "Storefront themes" },
+      { value: "43", label: "Backend test files" },
     ],
-    stack: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "Flutter", "Stripe Connect", "Redis"],
-    links: [{ label: "Visit cleansera.netlify.app", href: "https://cleansera.netlify.app" }],
+    stack: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Paystack", "Flutterwave"],
+    links: [{ label: "Visit shopcera.com", href: "https://shopcera.com" }],
     featured: true,
   },
   {

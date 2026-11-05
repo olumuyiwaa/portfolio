@@ -11,7 +11,7 @@ Personal portfolio built with Next.js 14 (App Router) and Tailwind CSS.
 Until a path is set, project cards show a tinted cover with the project's initials, services show a line icon (the home page no longer uses service images), and the hero and about portraits are hidden (the hero shows a stack panel instead).
 - `src/lib/siteConfig.js`: `IMAGES.hero` and `IMAGES.about`
 - `src/lib/projects.js`: `image` and `gallery` per project, `image` per service, `avatar` per testimonial
-- Put files in `public/images` and use paths like `/images/projects/cleansera.jpg`
+- Put files in `public/images` and use paths like `/images/projects/shopcera.jpg`
 
 ## Contact form
 The form posts to `/api/contact`, which emails you through [Resend](https://resend.com). Set `RESEND_API_KEY` (and optionally `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`) in `.env.local` or your host's environment. With no key it falls back to opening the visitor's mail app.
