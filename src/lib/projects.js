@@ -240,6 +240,8 @@ export const projects = [
       "/images/projects/shopcera-8.jpg",
       "/images/projects/shopcera-9.jpg",
       "/images/projects/shopcera-10.jpg",
+      "/images/projects/shopcera-11.jpg",
+      "/images/projects/shopcera-12.jpg",
     ],
     summary:
       "A multi-tenant SaaS that gives small African businesses their own branded online store and one dashboard for products, orders, bookings, customers and reports, on a simple subscription.",
